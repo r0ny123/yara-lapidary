@@ -92,6 +92,15 @@ def resolve(url):
         return resolve_gist(owner, gid, urllib.parse.unquote(path) if path else None)
     raise SystemExit("unsupported URL; give a github.com blob, raw.githubusercontent.com or gist URL")
 
+def _meta(path):
+    """API lookup that degrades to None when the token is refused or the quota is gone."""
+    try:
+        return api(path)
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403, 429):
+            return None
+        raise
+
 def verify():
     bad = 0
     for p in sorted(INDEX.glob("*.json")):
@@ -100,15 +109,19 @@ def verify():
         g = RE_GIST.match(url)
         if m:
             owner, repo, ref, _ = m.groups()
-            meta = api(f"/repos/{owner}/{repo}")
-            if meta.get("fork"):
+            meta = _meta(f"/repos/{owner}/{repo}")
+            if meta is None:
+                problems.append("fork status unverified (API unavailable)")
+            elif meta.get("fork"):
                 problems.append(f"fork of {meta['source']['full_name']}")
             if not SHA40.match(ref):
                 problems.append(f"not pinned to a commit (ref '{ref}')")
         elif g:
             owner, gid, ver, _ = g.groups()
-            meta = api(f"/gists/{gid}")
-            if meta.get("fork_of"):
+            meta = _meta(f"/gists/{gid}")
+            if meta is None:
+                problems.append("fork status unverified (API unavailable)")
+            elif meta.get("fork_of"):
                 problems.append(f"gist fork of {meta['fork_of']['owner']['login']}/{meta['fork_of']['id']}")
             if not ver:
                 problems.append("gist not pinned to a revision")

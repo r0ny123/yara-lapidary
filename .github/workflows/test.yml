@@ -33,7 +33,9 @@ jobs:
 
       - name: Verify entries point at upstream repositories, pinned
         env:
-          GH_TOKEN: ${{ github.token }}
+          # A user token (DISCOVERY_TOKEN) can read gists; the Actions token cannot, and the
+          # anonymous fallback shares the runner's exhausted quota. Unverifiable entries warn.
+          GH_TOKEN: ${{ secrets.DISCOVERY_TOKEN || github.token }}
         run: python3 scripts/origin.py verify
 
       - name: Fetch indexed sources
