@@ -1,1 +1,17 @@
-{}
+{
+  "100daysofyara/2024:qutluch/Day_024.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0005-credential-path-with-egress/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0509-env-or-public-key-near-egress/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0522-run-first-instruction/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0524-upload-phrasing/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0531-escape-runs/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0532-char-code-assembly/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0533-command-name-splitting/rule.yar": "2026-10-09",
+  "byte5digital/agentsweep:rules/0593-remote-instructions/rule.yar": "2026-10-09",
+  "hydradragonantivirus/hydradragonantivirus:hydradragon/yara-x/hidden_slow_rules.yar": "2026-10-09",
+  "qqbgxi/malwaredetectiontool:rules/yara/100 Days of YARA/2024-main/qutluch/Day_024.yar": "2026-10-09",
+  "qqbgxi/malwaredetectiontool:rules/yara/Day_024.yar": "2026-10-09",
+  "repulsivityy/virustotal:VT_Hunting/mal_gootloader.yar": "2026-10-09",
+  "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara": "2026-10-09",
+  "secpriv/adapt:yara_rules/malcat/frameworks.yar": "2026-10-09"
+}
