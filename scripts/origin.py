@@ -22,7 +22,7 @@ SHA40 = re.compile(r"^[0-9a-f]{40}$")
 
 def api(path):
     req = urllib.request.Request(API + path, headers={"Accept": "application/vnd.github+json",
-                                                      "User-Agent": "yara-exemplars/1.0"})
+                                                      "User-Agent": "yara-lapidary/1.0"})
     tok = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if tok:
         req.add_header("Authorization", f"Bearer {tok}")

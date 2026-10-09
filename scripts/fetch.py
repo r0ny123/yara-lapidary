@@ -27,7 +27,7 @@ def fetch(entry, force=False):
     out = CACHE / f"{entry['id']}.yar"
     if out.exists() and not force:
         return out
-    req = urllib.request.Request(entry["source_url"], headers={"User-Agent": "yara-exemplars/1.0"})
+    req = urllib.request.Request(entry["source_url"], headers={"User-Agent": "yara-lapidary/1.0"})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = r.read().decode("utf-8", "replace")
     if entry["format"] == "markdown-fenced":

@@ -1,4 +1,4 @@
-# yara-exemplars
+# yara-lapidary
 
 An index of public YARA rules that use advanced techniques (loops over match
 offsets, arithmetic on integer reads, known-plaintext tricks, module field
