@@ -12,7 +12,7 @@ The API's `source` object is "the ultimate source for the network", so a fork
 of a fork still resolves to the root. Gists expose `fork_of`. Set GH_TOKEN or
 GITHUB_TOKEN to raise the rate limit (60/h unauthenticated, 5000/h with a token).
 """
-import json, os, re, sys, urllib.parse, urllib.request
+import json, os, re, sys, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,8 +26,17 @@ def api(path):
     tok = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if tok:
         req.add_header("Authorization", f"Bearer {tok}")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        # The Actions GITHUB_TOKEN is refused by the gists API (403); public data is still
+        # readable anonymously, so retry once without credentials.
+        if tok and e.code in (401, 403):
+            req.remove_header("Authorization")
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.load(r)
+        raise
 
 RE_BLOB = re.compile(r"^https?://github\.com/([^/]+)/([^/]+)/(?:blob|raw)/([^/]+)/(.+?)(?:#.*)?$")
 RE_RAW = re.compile(r"^https?://raw\.githubusercontent\.com/([^/]+)/([^/]+)/([^/]+)/(.+)$")
