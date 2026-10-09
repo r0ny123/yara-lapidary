@@ -116,6 +116,14 @@ environment variables rather than interpolating them into scripts, and
 carry timeouts and concurrency groups. Bumping YARA-X means changing the
 version and checksum defaults in the composite action.
 
+## Atoms in CI
+
+The GitHub release binaries of YARA-X do not include the `debug` command,
+so the hosted workflows report atoms as `n/a`. Atom inspection needs a
+source build with `--features debug-cmd`; run `scripts/check.py` locally
+with `YR` pointing at such a build to fill the column, or build one in CI
+if the cost of a Rust compile is acceptable.
+
 ## Local requirements
 
 Python 3.9+ (stdlib only) and a `yr` binary on `PATH`, or set `YR` to its

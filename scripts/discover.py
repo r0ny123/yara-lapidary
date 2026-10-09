@@ -77,8 +77,9 @@ def search(q):
         try:
             items = api(url).get("items", []); SEARCH_OK += 1; return items
         except urllib.error.HTTPError as e:
-            if e.code in (403, 429) and attempt == 1 and e.headers.get("X-RateLimit-Remaining") not in (None, "0"):
-                time.sleep(65); continue   # secondary rate limit: wait a minute, retry once
+            if e.code in (403, 429) and attempt == 1:
+                # secondary rate limit: honor Retry-After (capped), then retry once
+                time.sleep(min(int(e.headers.get("Retry-After") or 60), 120)); continue
             print(f"search failed ({e.code}) for {q}: code search needs a user token with public repo read "
                   f"(DISCOVERY_TOKEN); the Actions token is rate-limited to nothing", file=sys.stderr)
             return []
@@ -118,7 +119,7 @@ def main():
             if key in seen or (repo["full_name"].lower(), it["path"]) in known: continue
             hits.setdefault(key, {"repo": repo["full_name"], "path": it["path"], "fork": repo.get("fork", False),
                                   "html_url": it["html_url"], "queries": []})["queries"].append(q.split(" language")[0])
-        time.sleep(3)   # code search allows 30 requests per minute with a token
+        time.sleep(8)   # code search secondary limits bite well below the documented 30/min
     print(f"{len(hits)} unseen hits from {min(a.max_queries, len(QUERIES))} queries ({SEARCH_OK} succeeded)", file=sys.stderr)
     if SEARCH_OK == 0:
         sys.exit("every search failed; nothing examined, seen.json untouched")
@@ -138,29 +139,31 @@ def main():
         except Exception as ex:
             print(f"skip {h['repo']}/{h['path']}: {ex}", file=sys.stderr); continue
         score, sig = assess(text)
-        if score < THRESHOLD: continue
+        rules = len(re.findall(r"^\s*(?:private\s+|global\s+)?rule\s+\w+", text, re.M))
+        # score per rule, so a 300-rule collection with one clever rule does not outrank a single clever rule
+        density = round(score / max(rules, 1), 1)
+        if score < THRESHOLD or density < 1.0: continue
         tmp = out / "cand.yar"; tmp.write_text(text)
         chk = yr("check", str(tmp))[1]; diags = sorted(set(re.findall(r"^(?:error|warning)\[([A-Za-z0-9_]+)\]", chk, re.M)))
         status = "fail" if "[ FAIL ]" in chk else ("warn" if diags else "pass")
         rc2, at = yr("debug", "atoms", "--json", str(tmp)); min_atom = None
         if rc2 == 0 and at.strip().startswith("["):
             lens = [len(x) // 2 for e in json.loads(at) for x in e["atoms"]]; min_atom = min(lens) if lens else 0
-        rules = len(re.findall(r"^\s*(?:private\s+|global\s+)?rule\s+\w+", text, re.M))
-        cands.append({**r, "repo": h["repo"], "path": h["path"], "from_fork": bool(r.get("origin_note")), "score": score,
+        cands.append({**r, "repo": h["repo"], "path": h["path"], "from_fork": bool(r.get("origin_note")), "score": score, "density": density,
                       "signals": sig, "status": status, "diagnostics": diags, "min_atom": min_atom, "rules": rules,
                       "queries": h["queries"]})
     tmp = out / "cand.yar"; tmp.unlink(missing_ok=True)
-    cands.sort(key=lambda c: -c["score"])
+    cands.sort(key=lambda c: (-c["density"], -c["score"]))
     (out / "candidates.json").write_text(json.dumps(cands, indent=2))
     SEEN.parent.mkdir(exist_ok=True); SEEN.write_text(json.dumps(seen, indent=2, sort_keys=True) + "\n")
     md = [f"# Discovery candidates {today}\n", f"{len(cands)} candidates scoring >= {THRESHOLD} out of {len(ranked)} examined hits. "
           "Review each, then add the ones worth keeping to `index/` with the JSON below. "
           "Collections that copy other people's rules are not forks and pass the origin check: read the rule's "
           "`author`/`reference` meta and index the author's own repository instead.\n",
-          "| score | status | rules | min atom | source | signals |", "|---|---|---|---|---|---|"]
+          "| score/rule | score | status | rules | min atom | source | signals |", "|---|---|---|---|---|---|---|"]
     for c in cands:
         am = "n/a" if c["min_atom"] is None else f"{c['min_atom']}B"
-        md.append(f"| {c['score']} | {c['status']} {', '.join(c['diagnostics'])} | {c['rules']} | {am} | [{c['repo']}/{c['path']}]({c['html_url']})"
+        md.append(f"| {c['density']} | {c['score']} | {c['status']} {', '.join(c['diagnostics'])} | {c['rules']} | {am} | [{c['repo']}/{c['path']}]({c['html_url']})"
                   f"{' (fork resolved)' if c['from_fork'] else ''} | {', '.join(f'{k}:{v}' for k, v in c['signals'].items())} |")
     md.append("\n## Entry skeletons\n")
     for c in cands:
