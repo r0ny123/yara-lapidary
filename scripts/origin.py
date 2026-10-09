@@ -58,9 +58,10 @@ def resolve_repo(owner, repo, ref, path):
     sha = commits[0]["sha"]
     if SHA40.match(ref) and ref != sha and not meta.get("fork"):
         note = (note + "; " if note else "") + f"requested ref {ref[:12]} differs from latest {sha[:12]}"
+    qpath = urllib.parse.quote(path, safe="/")
     return {
-        "source_url": f"https://raw.githubusercontent.com/{origin}/{sha}/{path}",
-        "html_url": f"https://github.com/{origin}/blob/{sha}/{path}",
+        "source_url": f"https://raw.githubusercontent.com/{origin}/{sha}/{qpath}",
+        "html_url": f"https://github.com/{origin}/blob/{sha}/{qpath}",
         "author": o_owner, "license": (o_meta.get("license") or {}).get("spdx_id") or "unspecified",
         "origin_note": note,
     }

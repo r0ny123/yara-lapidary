@@ -43,6 +43,31 @@ docs/queries.md   GitHub code-search queries that surface candidate rules
   `notes`). The workflow fails only when an entry does worse than expected.
 - `techniques` uses the vocabulary in `docs/techniques.md`.
 
+## Discovery
+
+A second workflow, `discover.yml`, runs weekly and on demand. It executes
+the token-level searches in `scripts/discover.py` through the GitHub REST
+API, resolves every hit to its upstream repository and pins it, skips forks,
+private repositories and anything already in `index/` or
+`discovery/seen.json`, downloads each file, compiles it with YARA-X and
+scores the rule text for advanced constructs (match-offset and match-length
+arithmetic, nested loops, module iterators, read arithmetic, hashes and
+entropy over computed ranges, `with`, `defined`, computed anchors). Hits at
+or above the threshold become a pull request on a `discovery/<date>` branch
+containing the candidate table, entry skeletons and the updated seen list.
+The workflow never writes to `index/`; promoting a candidate is a human
+decision made in the pull request.
+
+Code search needs a user token. Add a fine-grained personal access token
+with public repository read access as the `DISCOVERY_TOKEN` secret; without
+it the workflow tries the Actions token, which GitHub may refuse. If the
+repository does not allow Actions to open pull requests, the run files an
+issue instead and the branch still holds the report.
+
+Collections that copy other people's rules are not forks and pass the origin
+check. Read the rule's `author` and `reference` meta and index the author's
+own repository.
+
 ## Adding an entry
 
 1. Find a rule worth learning from (see `docs/queries.md`).
@@ -80,6 +105,16 @@ Rules stay at their source. The index records the license stated by the
 source (`unspecified` when none). Do not vendor rule text into this
 repository unless the license permits redistribution, and keep attribution
 in the entry.
+
+## Workflow hygiene
+
+Both workflows pin third-party actions to commit SHAs (Dependabot proposes
+updates weekly), install YARA-X through `.github/actions/install-yara-x`,
+which verifies the release tarball's SHA-256 before use, run with the
+minimum token permissions each job needs, pass workflow inputs through
+environment variables rather than interpolating them into scripts, and
+carry timeouts and concurrency groups. Bumping YARA-X means changing the
+version and checksum defaults in the composite action.
 
 ## Local requirements
 

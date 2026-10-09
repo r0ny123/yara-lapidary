@@ -1,0 +1,82 @@
+name: discover
+
+on:
+  schedule:
+    - cron: "41 7 * * 2"
+  workflow_dispatch:
+    inputs:
+      max_queries:
+        description: How many of the search queries to run
+        default: "20"
+      max_candidates:
+        description: How many hits to resolve, compile and score
+        default: "40"
+
+permissions: {}
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: ./.github/actions/install-yara-x
+
+      - name: Search, resolve, compile and score
+        env:
+          # Code search needs a user token; the Actions token may be refused.
+          # Store a fine-grained PAT with public-repository read as DISCOVERY_TOKEN.
+          GH_TOKEN: ${{ secrets.DISCOVERY_TOKEN || github.token }}
+          MAX_QUERIES: ${{ github.event.inputs.max_queries || '20' }}
+          MAX_CANDIDATES: ${{ github.event.inputs.max_candidates || '40' }}
+        run: |
+          set -euo pipefail
+          [[ "$MAX_QUERIES" =~ ^[0-9]+$ && "$MAX_CANDIDATES" =~ ^[0-9]+$ ]]
+          python3 scripts/discover.py --max-queries "$MAX_QUERIES" --max-candidates "$MAX_CANDIDATES" --out report
+
+      - name: Publish summary
+        run: cat report/candidates.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: candidates
+          path: report/candidates.*
+          retention-days: 90
+
+      - name: Open a pull request with the candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          day=$(date -u +%F)
+          mkdir -p discovery/runs
+          cp report/candidates.md "discovery/runs/${day}.md"
+          cp report/candidates.json "discovery/runs/${day}.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="discovery/${day}"
+          git checkout -b "$branch"
+          git add discovery/
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Discovery candidates ${day}"
+          git push -u origin "$branch"
+          n=$(python3 -c "import json;print(len(json.load(open('report/candidates.json'))))")
+          title="Discovery candidates ${day} (${n})"
+          body="$(printf '%s candidates. The table and entry skeletons are in discovery/runs/%s.md. Review, then add the ones worth keeping to index/.\n\nThis PR only records what was examined (discovery/seen.json) and the candidate report; it never changes index/.' "$n" "$day")"
+          if ! gh pr create --title "$title" --body "$body" --base main --head "$branch"; then
+            fallback="$(printf '%s\n\nPull request creation is disabled for Actions in this repository (Settings > Actions > General > Allow GitHub Actions to create and approve pull requests). The branch %s holds the report.' "$body" "$branch")"
+            gh issue create --title "$title" --body "$fallback"
+          fi

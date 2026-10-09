@@ -2,28 +2,34 @@ name: test
 
 on:
   push:
+    branches: [main]
   pull_request:
   schedule:
     - cron: "17 6 * * 1"
   workflow_dispatch:
 
-env:
-  YARA_X_VERSION: "1.21.0"
+permissions: {}
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-      - name: Install YARA-X CLI
-        run: |
-          set -euo pipefail
-          url="https://github.com/VirusTotal/yara-x/releases/download/v${YARA_X_VERSION}/yara-x-v${YARA_X_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
-          curl -sSL "$url" -o yr.tar.gz
-          tar -xzf yr.tar.gz
-          install -m 0755 "$(find . -maxdepth 3 -type f -name yr | head -1)" /usr/local/bin/yr
-          yr --version
+      - uses: ./.github/actions/install-yara-x
 
       - name: Verify entries point at upstream repositories, pinned
         env:
@@ -44,11 +50,12 @@ jobs:
           if [ -f report/REPORT.md ]; then cat report/REPORT.md >> "$GITHUB_STEP_SUMMARY"
           else echo "No report produced; see the failing step." >> "$GITHUB_STEP_SUMMARY"; fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: report
           path: report/
+          retention-days: 30
 
       - name: Fail on regressions
         if: steps.check.outcome == 'failure'

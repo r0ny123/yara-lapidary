@@ -1,0 +1,27 @@
+name: Install YARA-X CLI
+description: Download a pinned YARA-X release, verify its SHA-256, and put yr on PATH
+
+inputs:
+  version:
+    description: YARA-X release version
+    default: "1.21.0"
+  sha256:
+    description: SHA-256 of yara-x-v<version>-x86_64-unknown-linux-gnu.tar.gz
+    default: "01585181e8979e36ac10ab123fcf8921cf8ba879bf942916413e091e18d64852"
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        VERSION: ${{ inputs.version }}
+        SHA256: ${{ inputs.sha256 }}
+      run: |
+        set -euo pipefail
+        name="yara-x-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+        curl -sSL --fail --retry 3 -o "$name" "https://github.com/VirusTotal/yara-x/releases/download/v${VERSION}/${name}"
+        echo "${SHA256}  ${name}" | sha256sum -c -
+        tar -xzf "$name" yr
+        install -m 0755 yr "${RUNNER_TEMP}/yr"
+        echo "${RUNNER_TEMP}" >> "$GITHUB_PATH"
+        "${RUNNER_TEMP}/yr" --version
