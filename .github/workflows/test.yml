@@ -25,6 +25,11 @@ jobs:
           install -m 0755 "$(find . -maxdepth 3 -type f -name yr | head -1)" /usr/local/bin/yr
           yr --version
 
+      - name: Verify entries point at upstream repositories, pinned
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/origin.py verify
+
       - name: Fetch indexed sources
         run: python3 scripts/fetch.py
 

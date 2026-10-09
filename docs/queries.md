@@ -1,15 +1,24 @@
 # Finding candidate rules
 
-GitHub web code search accepts RE2-style regexes between slashes with
-`language:yara`, `path:`, `repo:`, `NOT` and `-qualifier`. The REST API
-(`gh search code`) takes literal tokens only; use it to count how common a
+GitHub web code search accepts regexes between slashes (escape forward
+slashes inside; look-around is not supported) with `language:`, `path:`
+(globs: `*` within a segment, `**` across directories, leading `/` anchors),
+`repo:owner/name` (full name, no patterns) and the operators `AND`, `OR`,
+`NOT`. Exclusion is written with `NOT`, not with a leading minus. The REST
+API (`gh search code`) takes literal tokens only; use it to count how common a
 construct is and the web UI to read the hits.
 
+Forks: code search includes files from forked repositories "if they meet
+certain criteria", and a fork may be modified or stale. Add `NOT is:fork` to
+every query, and when a hit is in a fork anyway, resolve it to the upstream
+with `scripts/origin.py resolve <url>` before indexing it.
+
 Noise exclusions for every query:
-`NOT maldoc NOT generic_anomalies -repo:Neo23x0/signature-base -repo:Yara-Rules/rules -path:test -path:tests`
+`NOT is:fork NOT maldoc NOT generic_anomalies NOT repo:Neo23x0/signature-base NOT repo:Yara-Rules/rules NOT path:test NOT path:tests`
 
 Inside `/.../` escape `\$ \( \) \[ \] \\ \/`. Keep regexes under about 150
-characters.
+characters. Files over 350 KiB and lines over 1,024 characters are not
+indexed, so very large generated rule files will not appear.
 
 | Construct | Query |
 |---|---|

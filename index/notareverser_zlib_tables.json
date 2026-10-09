@@ -1,6 +1,6 @@
 {
   "id": "notareverser_zlib_tables",
-  "source_url": "https://gist.githubusercontent.com/notareverser/b14667284046f7fdcf8dd84e48add1bd/raw/zlib.yara",
+  "source_url": "https://gist.githubusercontent.com/notareverser/b14667284046f7fdcf8dd84e48add1bd/raw/ac5bda427bf3cb25b1d262824f28da4f74e58ff3/zlib.yara",
   "html_url": "https://gist.github.com/notareverser/b14667284046f7fdcf8dd84e48add1bd",
   "author": "notareverser",
   "license": "unspecified",

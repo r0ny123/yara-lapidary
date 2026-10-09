@@ -1,6 +1,6 @@
 {
   "id": "notareverser_sevenzip_sfx",
-  "source_url": "https://gist.githubusercontent.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e/raw/sevenzip_sfx.yara",
+  "source_url": "https://gist.githubusercontent.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e/raw/eb54cf4b7f12bb42ded0519ca8fe4065310b3476/sevenzip_sfx.yara",
   "html_url": "https://gist.github.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e",
   "author": "notareverser",
   "license": "unspecified",

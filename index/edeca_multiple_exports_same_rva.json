@@ -1,6 +1,6 @@
 {
   "id": "edeca_multiple_exports_same_rva",
-  "source_url": "https://gist.githubusercontent.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38/raw/dll_multiple_exports_same_rva_patch.yar",
+  "source_url": "https://gist.githubusercontent.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38/raw/72f8851dc474cffad941f1fd1dd1385f09e64851/dll_multiple_exports_same_rva_patch.yar",
   "html_url": "https://gist.github.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38",
   "author": "edeca",
   "license": "unspecified",
