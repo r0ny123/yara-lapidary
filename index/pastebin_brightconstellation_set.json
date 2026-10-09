@@ -1,0 +1,17 @@
+{
+  "id": "pastebin_brightconstellation_set",
+  "source_url": "https://pastebin.com/raw/tEL8PZdn",
+  "html_url": "https://pastebin.com/tEL8PZdn",
+  "author": "unknown (BrightConstellation set)",
+  "license": "unspecified",
+  "techniques": [
+    "content-hash-range",
+    "export-anomaly",
+    "rich-header",
+    "resource-geometry",
+    "nested-loop",
+    "variant-set"
+  ],
+  "notes": "Export-prologue call-target hashing (int32(i+1)+i+5), section and data-directory hashes, auto-generated $fcn_ strings with disassembly blocks. Deprecated number_of_resources and duplicate_pattern_value warnings.",
+  "expect": "warn"
+}

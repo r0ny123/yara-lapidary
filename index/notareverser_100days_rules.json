@@ -1,0 +1,17 @@
+{
+  "id": "notareverser_100days_rules",
+  "source_url": "https://gist.githubusercontent.com/notareverser/d5f4f0d09285edca3ec027534c233271/raw/YARA%20rules%20for%20%23100DaysOfYARA",
+  "html_url": "https://gist.github.com/notareverser/d5f4f0d09285edca3ec027534c233271",
+  "author": "notareverser",
+  "license": "unspecified",
+  "techniques": [
+    "anonymous-match-vars",
+    "match-length",
+    "api-argument",
+    "at-computed-offset",
+    "overlay",
+    "hex-alternatives"
+  ],
+  "notes": "CallOverString (@ and ! in for-of), API-argument rules with three call forms, VB entry-point relationship, trailer anchors. Warns potentially_slow_loop and text_as_hex.",
+  "expect": "warn"
+}

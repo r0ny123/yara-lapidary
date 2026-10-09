@@ -1,0 +1,14 @@
+{
+  "id": "proofpoint_ta397_rar_ads",
+  "source_url": "https://raw.githubusercontent.com/EmergingThreats/threatresearch/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar",
+  "html_url": "https://github.com/EmergingThreats/threatresearch/blob/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar",
+  "author": "Proofpoint Threat Research",
+  "license": "see repository",
+  "techniques": [
+    "negative-window",
+    "structure-parser",
+    "hex-alternatives"
+  ],
+  "notes": "RAR5 service-header walk with jumps for variable fields and a bounded negative string; wmRAT code strings with per-line mnemonic comments. Warns text_as_hex.",
+  "expect": "warn"
+}

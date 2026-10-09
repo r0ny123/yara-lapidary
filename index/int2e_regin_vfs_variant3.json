@@ -1,0 +1,16 @@
+{
+  "id": "int2e_regin_vfs_variant3",
+  "source_url": "https://gist.githubusercontent.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a/raw/regin_vfs.yar",
+  "html_url": "https://gist.github.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a",
+  "author": "1nt2e",
+  "license": "unspecified",
+  "techniques": [
+    "structure-parser",
+    "file-derived-bound",
+    "entropy-range",
+    "header-arithmetic",
+    "integrity-arithmetic"
+  ],
+  "notes": "Walks an undocumented VFS with chained reads, a quantifier that is itself a header field, and entropy on computed spans.",
+  "expect": "pass"
+}

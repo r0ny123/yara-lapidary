@@ -1,0 +1,12 @@
+{
+  "id": "notareverser_kernel32_stackstring",
+  "source_url": "https://gist.githubusercontent.com/notareverser/eb2a7cf37e6cd64b817212aba9b556eb/raw/kernel32.yara",
+  "html_url": "https://gist.github.com/notareverser/eb2a7cf37e6cd64b817212aba9b556eb",
+  "author": "notareverser",
+  "license": "unspecified",
+  "techniques": [
+    "stack-string"
+  ],
+  "notes": "Compiles clean but yields a single 2-byte atom because [3-4] jumps skip known zero bytes; kept as the atom-quality cautionary example.",
+  "expect": "pass"
+}

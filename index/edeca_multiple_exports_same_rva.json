@@ -1,0 +1,15 @@
+{
+  "id": "edeca_multiple_exports_same_rva",
+  "source_url": "https://gist.githubusercontent.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38/raw/dll_multiple_exports_same_rva_patch.yar",
+  "html_url": "https://gist.github.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38",
+  "author": "edeca",
+  "license": "unspecified",
+  "techniques": [
+    "pairwise-duplicate",
+    "capped-loop",
+    "export-anomaly",
+    "nested-loop"
+  ],
+  "notes": "Nested i / i+1 loops over export_details capped with math.min(256, n); non_bool_expr warning on a bitmask test under YARA-X.",
+  "expect": "warn"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "wxs_xor_pe_header_arith",
+  "source_url": "https://gist.githubusercontent.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83/raw/rules.md",
+  "html_url": "https://gist.github.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83",
+  "author": "wxs",
+  "license": "unspecified",
+  "format": "markdown-fenced",
+  "techniques": [
+    "known-plaintext",
+    "header-arithmetic",
+    "at-computed-offset"
+  ],
+  "notes": "Recovers 1-, 2- and 4-byte XOR keys and an incrementing key from the MZ/PE header; one variant feeds a string hit's key into $b at <expr>.",
+  "expect": "pass"
+}

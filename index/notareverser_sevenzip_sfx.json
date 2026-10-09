@@ -1,0 +1,12 @@
+{
+  "id": "notareverser_sevenzip_sfx",
+  "source_url": "https://gist.githubusercontent.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e/raw/sevenzip_sfx.yara",
+  "html_url": "https://gist.github.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e",
+  "author": "notareverser",
+  "license": "unspecified",
+  "techniques": [
+    "variant-set"
+  ],
+  "notes": "Eight compiler variants of one routine plus a wide string anchor; 1 of ($fn*) and $command.",
+  "expect": "pass"
+}

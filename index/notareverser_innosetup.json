@@ -1,0 +1,13 @@
+{
+  "id": "notareverser_innosetup",
+  "source_url": "https://gist.githubusercontent.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f/raw/innosetup.yara",
+  "html_url": "https://gist.github.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f",
+  "author": "notareverser",
+  "license": "unspecified",
+  "techniques": [
+    "variant-set",
+    "hex-alternatives"
+  ],
+  "notes": "Masked Delphi code joined to the literal string header (refcount, length, text) that follows it.",
+  "expect": "pass"
+}

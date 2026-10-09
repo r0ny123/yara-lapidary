@@ -1,0 +1,13 @@
+{
+  "id": "notareverser_nozomi_upx_stubs",
+  "source_url": "https://gist.githubusercontent.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be/raw/nozomi_upx.yara",
+  "html_url": "https://gist.github.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be",
+  "author": "notareverser",
+  "license": "unspecified",
+  "techniques": [
+    "variant-set",
+    "hex-alternatives"
+  ],
+  "notes": "UPX decompressor stubs per architecture (x86, x64, MIPS be/le, ARM, PPC) with branch displacements masked.",
+  "expect": "pass"
+}
