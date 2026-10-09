@@ -68,15 +68,21 @@ SIGNALS = [
 ]
 THRESHOLD = 4
 
+SEARCH_OK = 0
+
 def search(q):
+    global SEARCH_OK
     url = "/search/code?q=" + urllib.parse.quote(q) + "&per_page=100"
-    try:
-        return api(url).get("items", [])
-    except urllib.error.HTTPError as e:
-        if e.code == 403 and "rate" in (e.headers.get("X-RateLimit-Remaining") or "0"):
-            time.sleep(60); return api(url).get("items", [])
-        print(f"search failed ({e.code}) for {q}: code search needs a user token (DISCOVERY_TOKEN)", file=sys.stderr)
-        return []
+    for attempt in (1, 2):
+        try:
+            items = api(url).get("items", []); SEARCH_OK += 1; return items
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 429) and attempt == 1 and e.headers.get("X-RateLimit-Remaining") not in (None, "0"):
+                time.sleep(65); continue   # secondary rate limit: wait a minute, retry once
+            print(f"search failed ({e.code}) for {q}: code search needs a user token with public repo read "
+                  f"(DISCOVERY_TOKEN); the Actions token is rate-limited to nothing", file=sys.stderr)
+            return []
+    return []
 
 def indexed_sources():
     out = set()
@@ -113,7 +119,9 @@ def main():
             hits.setdefault(key, {"repo": repo["full_name"], "path": it["path"], "fork": repo.get("fork", False),
                                   "html_url": it["html_url"], "queries": []})["queries"].append(q.split(" language")[0])
         time.sleep(3)   # code search allows 30 requests per minute with a token
-    print(f"{len(hits)} unseen hits from {min(a.max_queries, len(QUERIES))} queries", file=sys.stderr)
+    print(f"{len(hits)} unseen hits from {min(a.max_queries, len(QUERIES))} queries ({SEARCH_OK} succeeded)", file=sys.stderr)
+    if SEARCH_OK == 0:
+        sys.exit("every search failed; nothing examined, seen.json untouched")
     ranked = sorted(hits.values(), key=lambda h: -len(h["queries"]))[: a.max_candidates]
     cands, today = [], date.today().isoformat()
     for h in ranked:

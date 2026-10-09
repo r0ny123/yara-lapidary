@@ -61,6 +61,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          n=$(python3 -c "import json;print(len(json.load(open('report/candidates.json'))))")
+          if [ "$n" = "0" ]; then echo "no candidates this run; not opening a pull request"; exit 0; fi
           day=$(date -u +%F)
           mkdir -p discovery/runs
           cp report/candidates.md "discovery/runs/${day}.md"
@@ -73,7 +75,6 @@ jobs:
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "Discovery candidates ${day}"
           git push -u origin "$branch"
-          n=$(python3 -c "import json;print(len(json.load(open('report/candidates.json'))))")
           title="Discovery candidates ${day} (${n})"
           body="$(printf '%s candidates. The table and entry skeletons are in discovery/runs/%s.md. Review, then add the ones worth keeping to index/.\n\nThis PR only records what was examined (discovery/seen.json) and the candidate report; it never changes index/.' "$n" "$day")"
           if ! gh pr create --title "$title" --body "$body" --base main --head "$branch"; then
