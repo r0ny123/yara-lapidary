@@ -69,7 +69,7 @@ jobs:
           cp report/candidates.json "discovery/runs/${day}.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          branch="discovery/${day}"
+          branch="discovery/${day}-${GITHUB_RUN_ID}"   # unique per run; several runs a day must not collide
           git checkout -b "$branch"
           git add discovery/
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
