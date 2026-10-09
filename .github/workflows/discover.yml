@@ -65,8 +65,9 @@ jobs:
           if [ "$n" = "0" ]; then echo "no candidates this run; not opening a pull request"; exit 0; fi
           day=$(date -u +%F)
           mkdir -p discovery/runs
-          cp report/candidates.md "discovery/runs/${day}.md"
-          cp report/candidates.json "discovery/runs/${day}.json"
+          stamp="${day}-${GITHUB_RUN_ID}"
+          cp report/candidates.md "discovery/runs/${stamp}.md"
+          cp report/candidates.json "discovery/runs/${stamp}.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           branch="discovery/${day}-${GITHUB_RUN_ID}"   # unique per run; several runs a day must not collide
@@ -76,7 +77,7 @@ jobs:
           git commit -m "Discovery candidates ${day}"
           git push -u origin "$branch"
           title="Discovery candidates ${day} (${n})"
-          body="$(printf '%s candidates. The table and entry skeletons are in discovery/runs/%s.md. Review, then add the ones worth keeping to index/.\n\nThis PR only records what was examined (discovery/seen.json) and the candidate report; it never changes index/.' "$n" "$day")"
+          body="$(printf '%s candidates. The table and entry skeletons are in discovery/runs/%s.md. Review, then add the ones worth keeping to index/.\n\nThis PR only records what was examined (discovery/seen.json) and the candidate report; it never changes index/.' "$n" "$stamp")"
           if ! gh pr create --title "$title" --body "$body" --base main --head "$branch"; then
             fallback="$(printf '%s\n\nPull request creation is disabled for Actions in this repository (Settings > Actions > General > Allow GitHub Actions to create and approve pull requests). The branch %s holds the report.' "$body" "$branch")"
             gh issue create --title "$title" --body "$fallback"
