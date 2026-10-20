@@ -1,0 +1,802 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0531-escape-runs/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0531-escape-runs/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0531-escape-runs/rule.yar",
+    "from_fork": false,
+    "score": 24,
+    "density": 24.0,
+    "signals": {
+      "match-offset-arithmetic": 6,
+      "match-length": 1,
+      "nested-loop": 3,
+      "capped-loop": 3
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/chainguard-dev/malcontent/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+    "html_url": "https://github.com/chainguard-dev/malcontent/blob/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+    "author": "chainguard-dev",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "chainguard-dev/malcontent",
+    "path": "rules/sus/exclamation.yara",
+    "from_fork": false,
+    "score": 14,
+    "density": 14.0,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "match-length": 1,
+      "capped-loop": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/webshells/webshell_php_str_replace_create_func.yar",
+    "from_fork": false,
+    "score": 8,
+    "density": 8.0,
+    "signals": {
+      "match-offset-arithmetic": 2,
+      "capped-loop": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/dropper_win_ninerat.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_mgbot_main.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_mgbot_main.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/backdoor_win_mgbot_main.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/downloader_win_apt33_tickler.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/downloader_win_apt33_tickler.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/downloader_win_apt33_tickler.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 9,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/ShobhitMishra-bot/Android-Yara-Rules/bafe70c5e2a6f3010ae7f6f09b9027385d9246b1/7/dropper_win_ninerat.yar",
+    "html_url": "https://github.com/ShobhitMishra-bot/Android-Yara-Rules/blob/bafe70c5e2a6f3010ae7f6f09b9027385d9246b1/7/dropper_win_ninerat.yar",
+    "author": "ShobhitMishra-bot",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "ShobhitMishra-bot/Android-Yara-Rules",
+    "path": "7/dropper_win_ninerat.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/ShobhitMishra-bot/Android-Yara-Rules/a1ff4e273850255f15b946143e3da6a0cdc4a1bf/6/backdoor_win_mgbot_main.yar",
+    "html_url": "https://github.com/ShobhitMishra-bot/Android-Yara-Rules/blob/a1ff4e273850255f15b946143e3da6a0cdc4a1bf/6/backdoor_win_mgbot_main.yar",
+    "author": "ShobhitMishra-bot",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "ShobhitMishra-bot/Android-Yara-Rules",
+    "path": "6/backdoor_win_mgbot_main.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/ShobhitMishra-bot/Android-Yara-Rules/bafe70c5e2a6f3010ae7f6f09b9027385d9246b1/7/downloader_win_apt33_tickler.yar",
+    "html_url": "https://github.com/ShobhitMishra-bot/Android-Yara-Rules/blob/bafe70c5e2a6f3010ae7f6f09b9027385d9246b1/7/downloader_win_apt33_tickler.yar",
+    "author": "ShobhitMishra-bot",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "ShobhitMishra-bot/Android-Yara-Rules",
+    "path": "7/downloader_win_apt33_tickler.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 9,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/R4z1xx/yara-collection/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/dropper_win_ninerat.yar",
+    "html_url": "https://github.com/R4z1xx/yara-collection/blob/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/dropper_win_ninerat.yar",
+    "author": "R4z1xx",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "R4z1xx/yara-collection",
+    "path": "SEKOIA-IO/dropper_win_ninerat.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/R4z1xx/yara-collection/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/backdoor_win_mgbot_main.yar",
+    "html_url": "https://github.com/R4z1xx/yara-collection/blob/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/backdoor_win_mgbot_main.yar",
+    "author": "R4z1xx",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "R4z1xx/yara-collection",
+    "path": "SEKOIA-IO/backdoor_win_mgbot_main.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/R4z1xx/yara-collection/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/downloader_win_apt33_tickler.yar",
+    "html_url": "https://github.com/R4z1xx/yara-collection/blob/4ec41b42a299ea8143c7f8a4c8076d9e9135b802/SEKOIA-IO/downloader_win_apt33_tickler.yar",
+    "author": "R4z1xx",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "R4z1xx/yara-collection",
+    "path": "SEKOIA-IO/downloader_win_apt33_tickler.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 9,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0524-upload-phrasing/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0524-upload-phrasing/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0524-upload-phrasing/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0532-char-code-assembly/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0532-char-code-assembly/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0532-char-code-assembly/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0593-remote-instructions/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0593-remote-instructions/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0593-remote-instructions/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0522-run-first-instruction/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0522-run-first-instruction/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0522-run-first-instruction/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0533-command-name-splitting/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0533-command-name-splitting/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0533-command-name-splitting/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0005-credential-path-with-egress/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0005-credential-path-with-egress/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0005-credential-path-with-egress/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 6.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 6.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/f6-dfir/Ransomware/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar",
+    "html_url": "https://github.com/f6-dfir/Ransomware/blob/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar",
+    "author": "f6-dfir",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "f6-dfir/Ransomware",
+    "path": "LokiLocker/LokiLocker.yar",
+    "from_fork": false,
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "header-arithmetic": 1,
+      "pe-structure": 3
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\"",
+      "\"data_directories[\" \"virtual_address\" \"filesize\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/mikesxrs/Open-Source-YARA-rules/c8606997a9b1bf263964eddee917c4352d882ea9/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "html_url": "https://github.com/mikesxrs/Open-Source-YARA-rules/blob/c8606997a9b1bf263964eddee917c4352d882ea9/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "author": "mikesxrs",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "mikesxrs/Open-Source-YARA-rules",
+    "path": "juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "from_fork": false,
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "content-hash-range": 2,
+      "pe-structure": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E001",
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/juanandresgs/YARA/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara",
+    "html_url": "https://github.com/juanandresgs/YARA/blob/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara",
+    "author": "juanandresgs",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "juanandresgs/YARA",
+    "path": "sta_Voltron_0xFancyFilter.yara",
+    "from_fork": false,
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "content-hash-range": 2,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/MeisamEb/Repository-of-yara-rules/a9f3a10ceb41bbe1d7dee24f4b2b239734c3de98/generic/sta_Voltron_0xFancyFilter.yara",
+    "html_url": "https://github.com/MeisamEb/Repository-of-yara-rules/blob/a9f3a10ceb41bbe1d7dee24f4b2b239734c3de98/generic/sta_Voltron_0xFancyFilter.yara",
+    "author": "MeisamEb",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "MeisamEb/Repository-of-yara-rules",
+    "path": "generic/sta_Voltron_0xFancyFilter.yara",
+    "from_fork": false,
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "content-hash-range": 2,
+      "pe-structure": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E001",
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/MyMel2001/Sneed-Reactivity/08e8d462fe7b3ed4aebc6e15c82924085ad8cebe/yara-mikesxrs/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "html_url": "https://github.com/MyMel2001/Sneed-Reactivity/blob/08e8d462fe7b3ed4aebc6e15c82924085ad8cebe/yara-mikesxrs/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "author": "MyMel2001",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "MyMel2001/Sneed-Reactivity",
+    "path": "yara-mikesxrs/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "from_fork": false,
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "content-hash-range": 2,
+      "pe-structure": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E001",
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\"",
+      "\"rich_signature.clear_data\" \"for\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/fox-it/dissect.cobaltstrike/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar",
+    "html_url": "https://github.com/fox-it/dissect.cobaltstrike/blob/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar",
+    "author": "fox-it",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "fox-it/dissect.cobaltstrike",
+    "path": "scripts/obfuscated-beacon.yar",
+    "from_fork": false,
+    "score": 18,
+    "density": 4.5,
+    "signals": {
+      "match-offset-arithmetic": 4,
+      "read-arithmetic": 34,
+      "capped-loop": 4
+    },
+    "status": "warn",
+    "diagnostics": [
+      "too_many_iterations"
+    ],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+    "html_url": "https://github.com/volexity/threat-intel/blob/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+    "author": "volexity",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "volexity/threat-intel",
+    "path": "2022/2022-06-15 DriftingCloud - Zero-Day Sophos Firewall Exploitation and an Insidious Breach/indicators/yara.yar",
+    "from_fork": false,
+    "score": 13,
+    "density": 1.6,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "capped-loop": 2,
+      "pattern-in-window": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 8,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/CYB3RMX/Qu1cksc0pe/180d44f44725bbce0296dc5346554fcf8852bbb2/Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "html_url": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "author": "CYB3RMX",
+    "license": "GPL-3.0",
+    "origin_note": "",
+    "repo": "CYB3RMX/Qu1cksc0pe",
+    "path": "Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "html_url": "https://github.com/volexity/threat-intel/blob/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "author": "volexity",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "volexity/threat-intel",
+    "path": "2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudesh0sudesh/GithubIOC_Collector/17fc07a7f24d8b2eea4b6306c64b748bfc654e48/repositories/volexity_threat-intel/original_files/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "html_url": "https://github.com/sudesh0sudesh/GithubIOC_Collector/blob/17fc07a7f24d8b2eea4b6306c64b748bfc654e48/repositories/volexity_threat-intel/original_files/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "author": "sudesh0sudesh",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudesh0sudesh/GithubIOC_Collector",
+    "path": "repositories/volexity_threat-intel/original_files/2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/HydraDragonAntivirus/HydraDragonAntivirus/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "html_url": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus/blob/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "author": "HydraDragonAntivirus",
+    "license": "GPL-2.0",
+    "origin_note": "",
+    "repo": "HydraDragonAntivirus/HydraDragonAntivirus",
+    "path": "hydradragon/yara-x/hidden_slow_rules.yar",
+    "from_fork": false,
+    "score": 52,
+    "density": 1.1,
+    "signals": {
+      "match-offset-arithmetic": 90,
+      "match-length": 20,
+      "nested-loop": 23,
+      "module-iterator": 16,
+      "read-arithmetic": 66,
+      "content-hash-range": 2,
+      "pattern-in-window": 5,
+      "hex-alternatives": 3
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 47,
+    "queries": [
+      "\"for any of\" \"uint8(@\"",
+      "\"for any of\" \"uint32(@\""
+    ]
+  }
+]
