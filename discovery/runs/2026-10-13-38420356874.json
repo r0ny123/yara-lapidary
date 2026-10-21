@@ -1,0 +1,526 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/chainguard-dev/malcontent/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+    "html_url": "https://github.com/chainguard-dev/malcontent/blob/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+    "author": "chainguard-dev",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "chainguard-dev/malcontent",
+    "path": "rules/sus/exclamation.yara",
+    "from_fork": false,
+    "score": 14,
+    "density": 14.0,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "match-length": 1,
+      "capped-loop": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/Ununp3ntium115/Custom-Yara-Rules/97f20f565e491da80fb8176cd33fb7114c7d60dc/sources/yaraify-abusech/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "html_url": "https://github.com/Ununp3ntium115/Custom-Yara-Rules/blob/97f20f565e491da80fb8176cd33fb7114c7d60dc/sources/yaraify-abusech/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "author": "Ununp3ntium115",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "Ununp3ntium115/Custom-Yara-Rules",
+    "path": "sources/yaraify-abusech/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "from_fork": false,
+    "score": 11,
+    "density": 11.0,
+    "signals": {
+      "match-offset-arithmetic": 46,
+      "read-arithmetic": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/kamisara/AI-malware-sandbox/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "html_url": "https://github.com/kamisara/AI-malware-sandbox/blob/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "author": "kamisara",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "kamisara/AI-malware-sandbox",
+    "path": "rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "from_fork": false,
+    "score": 11,
+    "density": 11.0,
+    "signals": {
+      "match-offset-arithmetic": 46,
+      "read-arithmetic": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/kamisara/AI-malware-sandbox/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "html_url": "https://github.com/kamisara/AI-malware-sandbox/blob/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "author": "kamisara",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "kamisara/AI-malware-sandbox",
+    "path": "rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "from_fork": false,
+    "score": 11,
+    "density": 11.0,
+    "signals": {
+      "match-offset-arithmetic": 46,
+      "read-arithmetic": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/webshells/webshell_php_str_replace_create_func.yar",
+    "from_fork": false,
+    "score": 8,
+    "density": 8.0,
+    "signals": {
+      "match-offset-arithmetic": 2,
+      "capped-loop": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/dropper_win_ninerat.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_mgbot_main.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_mgbot_main.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/backdoor_win_mgbot_main.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 6,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/downloader_win_apt33_tickler.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/downloader_win_apt33_tickler.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/downloader_win_apt33_tickler.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "content-hash-range": 9,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/webshells/apt_webshell_aspx_glasstoken.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 6.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "html_url": "https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "author": "sudo-amirops",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudo-amirops/YARA-SIGMA-Rules-Collection",
+    "path": "yara/apt/apt_malware_noknok_base64_encoded_bash.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 6.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_kimsuky.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_kimsuky.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/backdoor_win_kimsuky.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 6.0,
+    "signals": {
+      "content-hash-range": 19
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/loader_win_jennlog.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/loader_win_jennlog.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/loader_win_jennlog.yar",
+    "from_fork": false,
+    "score": 4,
+    "density": 4.0,
+    "signals": {
+      "content-hash-range": 2
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/implant_win_lyceum.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/implant_win_lyceum.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/implant_win_lyceum.yar",
+    "from_fork": false,
+    "score": 4,
+    "density": 4.0,
+    "signals": {
+      "content-hash-range": 2
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/backdoor_win_minibus.yar",
+    "from_fork": false,
+    "score": 4,
+    "density": 4.0,
+    "signals": {
+      "content-hash-range": 2
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_andardoor.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_andardoor.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "yara_rules/backdoor_win_andardoor.yar",
+    "from_fork": false,
+    "score": 4,
+    "density": 4.0,
+    "signals": {
+      "content-hash-range": 2
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+    "html_url": "https://github.com/volexity/threat-intel/blob/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+    "author": "volexity",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "volexity/threat-intel",
+    "path": "2022/2022-06-15 DriftingCloud - Zero-Day Sophos Firewall Exploitation and an Insidious Breach/indicators/yara.yar",
+    "from_fork": false,
+    "score": 13,
+    "density": 1.6,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "capped-loop": 2,
+      "pattern-in-window": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 8,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/CYB3RMX/Qu1cksc0pe/180d44f44725bbce0296dc5346554fcf8852bbb2/Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "html_url": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "author": "CYB3RMX",
+    "license": "GPL-3.0",
+    "origin_note": "",
+    "repo": "CYB3RMX/Qu1cksc0pe",
+    "path": "Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "html_url": "https://github.com/volexity/threat-intel/blob/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "author": "volexity",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "volexity/threat-intel",
+    "path": "2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/sudesh0sudesh/GithubIOC_Collector/17fc07a7f24d8b2eea4b6306c64b748bfc654e48/repositories/volexity_threat-intel/original_files/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "html_url": "https://github.com/sudesh0sudesh/GithubIOC_Collector/blob/17fc07a7f24d8b2eea4b6306c64b748bfc654e48/repositories/volexity_threat-intel/original_files/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+    "author": "sudesh0sudesh",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "sudesh0sudesh/GithubIOC_Collector",
+    "path": "repositories/volexity_threat-intel/original_files/2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar",
+    "from_fork": false,
+    "score": 6,
+    "density": 1.5,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "capped-loop": 1,
+      "pattern-in-window": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"math.min\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/HydraDragonAntivirus/HydraDragonAntivirus/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "html_url": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus/blob/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "author": "HydraDragonAntivirus",
+    "license": "GPL-2.0",
+    "origin_note": "",
+    "repo": "HydraDragonAntivirus/HydraDragonAntivirus",
+    "path": "hydradragon/yara-x/hidden_slow_rules.yar",
+    "from_fork": false,
+    "score": 52,
+    "density": 1.1,
+    "signals": {
+      "match-offset-arithmetic": 90,
+      "match-length": 20,
+      "nested-loop": 23,
+      "module-iterator": 16,
+      "read-arithmetic": 66,
+      "content-hash-range": 2,
+      "pattern-in-window": 5,
+      "hex-alternatives": 3
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 47,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar",
+    "html_url": "https://github.com/SEKOIA-IO/Community/blob/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar",
+    "author": "SEKOIA-IO",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "SEKOIA-IO/Community",
+    "path": "IOCs/Interlock/interlock.yar",
+    "from_fork": false,
+    "score": 4,
+    "density": 1.0,
+    "signals": {
+      "content-hash-range": 2
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009",
+      "deprecated_field",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 4,
+    "queries": [
+      "\"hash.sha256(\" \"resources[\""
+    ]
+  }
+]
