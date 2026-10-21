@@ -11,5 +11,6 @@
     "at-computed-offset"
   ],
   "notes": "Recovers 1-, 2- and 4-byte XOR keys and an incrementing key from the MZ/PE header; one variant feeds a string hit's key into $b at <expr>.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

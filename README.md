@@ -5,17 +5,22 @@ offsets, arithmetic on integer reads, known-plaintext tricks, module field
 relationships, hex alternatives), with a workflow that keeps them compiling
 under the current YARA-X.
 
-The repository stores metadata, not copies. Each entry in `index/` points at
-a public source URL and records the license, the author, and the techniques
-the rule demonstrates. `scripts/fetch.py` downloads the sources into
-`cache/` at test time; `scripts/check.py` runs `yr check`, `yr fmt --check`,
-`yr compile` and `yr debug atoms` on every file and writes `report/`.
+Each entry in `index/` points at a public source URL pinned to a commit and
+records the license, the author, and the techniques the rule demonstrates.
+`rules/` holds a vendored copy of every pinned source with a provenance
+header, so the rules can be read in one place and survive upstream
+deletion. `scripts/fetch.py` downloads the pinned sources into `cache/`;
+`scripts/snapshot.py` writes or verifies the copies in `rules/`;
+`scripts/check.py` runs `yr check`, `yr fmt --check`, `yr compile` and
+`yr debug atoms` on every file and writes `report/`.
 
 ## Layout
 
 ```
-index/            one JSON file per source (see schema below)
-scripts/fetch.py  resolve index entries into cache/<id>.yar
+index/               one JSON file per source (see schema below)
+rules/               vendored copy of each pinned source, with a provenance header
+scripts/fetch.py     resolve index entries into cache/<id>.yar
+scripts/snapshot.py  write rules/<id>.yar from the cache, or --check that they still match
 scripts/check.py  compile every cached file with YARA-X, write report/
 docs/queries.md   GitHub code-search queries that surface candidate rules
 .github/workflows/test.yml   weekly and on push: fetch, check, publish report
@@ -72,7 +77,7 @@ own repository.
 
 1. Find a rule worth learning from (see `docs/queries.md`).
 2. Add `index/<id>.json` with a stable raw URL (pin a commit for repositories).
-3. Run `python3 scripts/fetch.py && python3 scripts/check.py` locally.
+3. Run `python3 scripts/fetch.py && python3 scripts/snapshot.py && python3 scripts/check.py` locally and commit the new `rules/<id>.yar`.
 4. Open a pull request; the workflow attaches the report.
 
 ## Origin policy
@@ -101,10 +106,13 @@ When searching, add `NOT is:fork` to exclude forks up front; see
 
 ## License policy
 
-Rules stay at their source. The index records the license stated by the
-source (`unspecified` when none). Do not vendor rule text into this
-repository unless the license permits redistribution, and keep attribution
-in the entry.
+The index records the license stated by the source (`unspecified` when
+none), and every vendored copy in `rules/` carries a header naming the
+source, author, license and retrieval date. Copies are kept for study and
+testing with attribution, never presented as this repository's work. Set
+`"vendor": false` on an entry whose license forbids redistribution; the
+entry is still fetched and compiled, only the copy is omitted. Honor
+takedown requests by setting `vendor: false` and deleting the copy.
 
 ## Workflow hygiene
 

@@ -12,5 +12,6 @@
     "integrity-arithmetic"
   ],
   "notes": "Walks an undocumented VFS with chained reads, a quantifier that is itself a header field, and entropy on computed spans.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

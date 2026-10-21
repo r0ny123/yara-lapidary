@@ -10,5 +10,6 @@
     "hex-alternatives"
   ],
   "notes": "RAR5 service-header walk with jumps for variable fields and a bounded negative string; wmRAT code strings with per-line mnemonic comments. Warns text_as_hex.",
-  "expect": "warn"
+  "expect": "warn",
+  "fetched": "2026-10-21"
 }

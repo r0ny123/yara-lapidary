@@ -17,5 +17,6 @@
     "elf"
   ],
   "notes": "315 rules; over half pure structure. Rolling-XOR brute force, export first bytes, resource and overlay anomalies, logger rules. Deprecated number_of_* fields and non_bool_expr under YARA-X.",
-  "expect": "warn"
+  "expect": "warn",
+  "fetched": "2026-10-21"
 }

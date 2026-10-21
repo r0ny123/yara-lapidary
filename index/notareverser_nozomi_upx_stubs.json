@@ -9,5 +9,6 @@
     "hex-alternatives"
   ],
   "notes": "UPX decompressor stubs per architecture (x86, x64, MIPS be/le, ARM, PPC) with branch displacements masked.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

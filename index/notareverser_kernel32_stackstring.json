@@ -8,5 +8,6 @@
     "stack-string"
   ],
   "notes": "Compiles clean but yields a single 2-byte atom because [3-4] jumps skip known zero bytes; kept as the atom-quality cautionary example.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

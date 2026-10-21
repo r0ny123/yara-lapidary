@@ -8,5 +8,6 @@
     "structure-parser"
   ],
   "notes": "Library detection by its fixed Huffman tables: long literal data, no wildcards, architecture independent.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

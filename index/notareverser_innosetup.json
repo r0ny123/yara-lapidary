@@ -9,5 +9,6 @@
     "hex-alternatives"
   ],
   "notes": "Masked Delphi code joined to the literal string header (refcount, length, text) that follows it.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

@@ -8,5 +8,6 @@
     "variant-set"
   ],
   "notes": "Eight compiler variants of one routine plus a wide string anchor; 1 of ($fn*) and $command.",
-  "expect": "pass"
+  "expect": "pass",
+  "fetched": "2026-10-21"
 }

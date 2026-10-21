@@ -13,5 +13,6 @@
     "hex-alternatives"
   ],
   "notes": "CallOverString (@ and ! in for-of), API-argument rules with three call forms, VB entry-point relationship, trailer anchors. Warns potentially_slow_loop and text_as_hex.",
-  "expect": "warn"
+  "expect": "warn",
+  "fetched": "2026-10-21"
 }

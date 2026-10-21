@@ -41,6 +41,9 @@ jobs:
       - name: Fetch indexed sources
         run: python3 scripts/fetch.py
 
+      - name: Vendored copies match their pinned sources
+        run: python3 scripts/snapshot.py --check
+
       - name: Check with YARA-X
         id: check
         run: python3 scripts/check.py
