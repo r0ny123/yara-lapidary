@@ -1,0 +1,377 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0531-escape-runs/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0531-escape-runs/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0531-escape-runs/rule.yar",
+    "from_fork": false,
+    "score": 24,
+    "density": 24.0,
+    "signals": {
+      "match-offset-arithmetic": 6,
+      "match-length": 1,
+      "nested-loop": 3,
+      "capped-loop": 3
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara",
+    "html_url": "https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara",
+    "author": "reversinglabs",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "reversinglabs/reversinglabs-siem-rules",
+    "path": "Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara",
+    "from_fork": false,
+    "score": 18,
+    "density": 18.0,
+    "signals": {
+      "match-offset-arithmetic": 4,
+      "match-length": 2,
+      "module-iterator": 1,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/8f510cdf14ecb79d1a2dcf2b8c154fe660dce36f/rules/0524-upload-phrasing/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/8f510cdf14ecb79d1a2dcf2b8c154fe660dce36f/rules/0524-upload-phrasing/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0524-upload-phrasing/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0532-char-code-assembly/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0532-char-code-assembly/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0532-char-code-assembly/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/4b1b1a48b2ee96b98a54078231c7b38627e65612/rules/0593-remote-instructions/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/4b1b1a48b2ee96b98a54078231c7b38627e65612/rules/0593-remote-instructions/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0593-remote-instructions/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/8f510cdf14ecb79d1a2dcf2b8c154fe660dce36f/rules/0522-run-first-instruction/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/8f510cdf14ecb79d1a2dcf2b8c154fe660dce36f/rules/0522-run-first-instruction/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0522-run-first-instruction/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0533-command-name-splitting/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/1a767d1682c4dbcb8d971d0b26bac4ced53329b3/rules/0533-command-name-splitting/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0533-command-name-splitting/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/fa825beea5bdbdcfe74e26f60f93e0b3bb11f220/rules/0005-credential-path-with-egress/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/fa825beea5bdbdcfe74e26f60f93e0b3bb11f220/rules/0005-credential-path-with-egress/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0005-credential-path-with-egress/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/a3a4fd16751970a2dff58965e8264c39915d8107/rules/0509-env-or-public-key-near-egress/rule.yar",
+    "html_url": "https://github.com/byte5digital/agentsweep/blob/a3a4fd16751970a2dff58965e8264c39915d8107/rules/0509-env-or-public-key-near-egress/rule.yar",
+    "author": "byte5digital",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "byte5digital/agentsweep",
+    "path": "rules/0509-env-or-public-key-near-egress/rule.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "nested-loop": 1,
+      "capped-loop": 1
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"math.max\" \"for any\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/100DaysofYARA/2024/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar",
+    "html_url": "https://github.com/100DaysofYARA/2024/blob/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar",
+    "author": "100DaysofYARA",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "100DaysofYARA/2024",
+    "path": "qutluch/Day_024.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "header-arithmetic": 2,
+      "pe-structure": 4
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/qqbgxi/MalwareDetectionTool/25d47d943f30f3514a7eaa8d51f4108cd48b6af1/rules/yara/Day_024.yar",
+    "html_url": "https://github.com/qqbgxi/MalwareDetectionTool/blob/25d47d943f30f3514a7eaa8d51f4108cd48b6af1/rules/yara/Day_024.yar",
+    "author": "qqbgxi",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "qqbgxi/MalwareDetectionTool",
+    "path": "rules/yara/Day_024.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "header-arithmetic": 2,
+      "pe-structure": 4
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/qqbgxi/MalwareDetectionTool/25d47d943f30f3514a7eaa8d51f4108cd48b6af1/rules/yara/100%20Days%20of%20YARA/2024-main/qutluch/Day_024.yar",
+    "html_url": "https://github.com/qqbgxi/MalwareDetectionTool/blob/25d47d943f30f3514a7eaa8d51f4108cd48b6af1/rules/yara/100%20Days%20of%20YARA/2024-main/qutluch/Day_024.yar",
+    "author": "qqbgxi",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "qqbgxi/MalwareDetectionTool",
+    "path": "rules/yara/100 Days of YARA/2024-main/qutluch/Day_024.yar",
+    "from_fork": false,
+    "score": 7,
+    "density": 7.0,
+    "signals": {
+      "header-arithmetic": 2,
+      "pe-structure": 4
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/HydraDragonAntivirus/HydraDragonAntivirus/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "html_url": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus/blob/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar",
+    "author": "HydraDragonAntivirus",
+    "license": "GPL-2.0",
+    "origin_note": "",
+    "repo": "HydraDragonAntivirus/HydraDragonAntivirus",
+    "path": "hydradragon/yara-x/hidden_slow_rules.yar",
+    "from_fork": false,
+    "score": 52,
+    "density": 1.1,
+    "signals": {
+      "match-offset-arithmetic": 90,
+      "match-length": 20,
+      "nested-loop": 23,
+      "module-iterator": 16,
+      "read-arithmetic": 66,
+      "content-hash-range": 2,
+      "pattern-in-window": 5,
+      "hex-alternatives": 3
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 47,
+    "queries": [
+      "\"for any of\" \"uint8(@\"",
+      "\"for any of\" \"uint32(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/SecPriv/adapt/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar",
+    "html_url": "https://github.com/SecPriv/adapt/blob/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar",
+    "author": "SecPriv",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "SecPriv/adapt",
+    "path": "yara_rules/malcat/frameworks.yar",
+    "from_fork": false,
+    "score": 15,
+    "density": 1.1,
+    "signals": {
+      "match-length": 1,
+      "pe-structure": 15,
+      "at-computed-offset": 11,
+      "non-pe-module": 3
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009",
+      "deprecated_field",
+      "non_bool_expr",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 14,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  }
+]
