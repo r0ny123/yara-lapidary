@@ -13,49 +13,49 @@
   "byte5digital/agentsweep:rules/0005-credential-path-with-egress/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0005-credential-path-with-egress/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0005_credential_path_with_egress_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "05576b1eb50d2183e46a15cb75286fa6b9857310275ae4d7451b4e462ad37cec"
   },
   "byte5digital/agentsweep:rules/0509-env-or-public-key-near-egress/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0509-env-or-public-key-near-egress/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0509_env_or_public_key_near_egress_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "7259671106e369f4a5f4f393c78c2e7df0e61f7d3e0e92abe20938bb5345b000"
   },
   "byte5digital/agentsweep:rules/0522-run-first-instruction/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0522-run-first-instruction/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0522_run_first_instruction_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "635b89d6c2486fd1b53e2cdfc5a883b4361066d61b5ab72ba2579c87dc7eecb4"
   },
   "byte5digital/agentsweep:rules/0524-upload-phrasing/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0524-upload-phrasing/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0524_upload_phrasing_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "1630ca7bcc07fc182055f4a60a3b5be5510aefeb7cbc8e486e08aa9dc2053b9e"
   },
   "byte5digital/agentsweep:rules/0531-escape-runs/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0531-escape-runs/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0531_escape_runs_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "02cddadfc71656259a382bd6487ff4f66ef43b1dccbe8df4b0ff0b6b452ec9ab"
   },
   "byte5digital/agentsweep:rules/0532-char-code-assembly/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0532-char-code-assembly/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0532_char_code_assembly_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "7ba018f58c270d62445e87474fde0255179f2bca669e6260de6ffbeddf324506"
   },
   "byte5digital/agentsweep:rules/0533-command-name-splitting/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0533-command-name-splitting/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0533_command_name_splitting_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "25995cb2d4c2db579ffc18d8bc894396c31fab10e22e0ed5f821cf6ae2db7611"
   },
   "byte5digital/agentsweep:rules/0593-remote-instructions/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0593-remote-instructions/rule.yar",
     "date": "2026-10-09",
-    "indexed_as": "byte5digital_0593_remote_instructions_rule",
+    "rejected": "agentsweep fixture rules target prompt text, not malware",
     "sha256": "49d8f08e480802b6dbb769392d127c6bc5f2392c07b355914d3ff67a98a4be3f"
   },
   "chainguard-dev/malcontent:rules/sus/exclamation.yara": {
@@ -128,7 +128,7 @@
   "meisameb/repository-of-yara-rules:generic/sta_Voltron_0xFancyFilter.yara": {
     "canonical": "meisameb/repository-of-yara-rules:generic/sta_Voltron_0xFancyFilter.yara",
     "date": "2026-10-20",
-    "indexed_as": "meisameb_sta_voltron_0xfancyfilter",
+    "rejected": "copy of juanandresgs's rule with minor edits",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
   },
   "mgreen27/detectraptor:yara/full_windows_process.yar": {
