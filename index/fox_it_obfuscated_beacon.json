@@ -1,0 +1,19 @@
+{
+  "id": "fox_it_obfuscated_beacon",
+  "source_url": "https://raw.githubusercontent.com/fox-it/dissect.cobaltstrike/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar",
+  "html_url": "https://github.com/fox-it/dissect.cobaltstrike/blob/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar",
+  "author": "fox-it",
+  "license": "MIT",
+  "techniques": [
+    "capped-loop",
+    "match-offset-arithmetic",
+    "read-arithmetic"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

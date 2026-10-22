@@ -1,0 +1,19 @@
+{
+  "id": "byte5digital_0593_remote_instructions_rule",
+  "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0593-remote-instructions/rule.yar",
+  "html_url": "https://github.com/byte5digital/agentsweep/blob/bcc9cacccb928c4612ccd30fce931ebb2c806776/rules/0593-remote-instructions/rule.yar",
+  "author": "byte5digital",
+  "license": "Apache-2.0",
+  "techniques": [
+    "capped-loop",
+    "match-offset-arithmetic",
+    "nested-loop"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "fail",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

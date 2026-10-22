@@ -1,0 +1,21 @@
+{
+  "id": "volexity_indicators_yara",
+  "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+  "html_url": "https://github.com/volexity/threat-intel/blob/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar",
+  "author": "volexity",
+  "license": "NOASSERTION",
+  "techniques": [
+    "capped-loop",
+    "match-offset-arithmetic",
+    "pattern-in-window"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags. Same filename also under sudesh0sudesh/GithubIOC_Collector; content differs, verify which is the author's.",
+  "expect": "fail",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [
+    "sudesh0sudesh/GithubIOC_Collector/repositories/volexity_threat-intel/original_files/2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar"
+  ],
+  "fetched": "2026-10-22"
+}

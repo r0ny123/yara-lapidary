@@ -1,0 +1,19 @@
+{
+  "id": "byte5digital_0509_env_or_public_key_near_egress_rule",
+  "source_url": "https://raw.githubusercontent.com/byte5digital/agentsweep/a3a4fd16751970a2dff58965e8264c39915d8107/rules/0509-env-or-public-key-near-egress/rule.yar",
+  "html_url": "https://github.com/byte5digital/agentsweep/blob/a3a4fd16751970a2dff58965e8264c39915d8107/rules/0509-env-or-public-key-near-egress/rule.yar",
+  "author": "byte5digital",
+  "license": "Apache-2.0",
+  "techniques": [
+    "capped-loop",
+    "match-offset-arithmetic",
+    "nested-loop"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "fail",
+  "promoted_from": [
+    "2026-10-09.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

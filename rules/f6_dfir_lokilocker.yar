@@ -1,0 +1,39 @@
+// Vendored copy for study. Not original work of this repository.
+// Source:   https://github.com/f6-dfir/Ransomware/blob/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
+// Pinned:   https://raw.githubusercontent.com/f6-dfir/Ransomware/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
+// Author:   f6-dfir
+// License:  Apache-2.0 (as declared by the source; see it for terms)
+// Fetched:  2026-10-22
+
+/*
+LokiLocker/BlackBit ransomware
+*/
+
+import "pe"
+
+
+rule LokiLocker_obfuscation
+{
+    meta:
+        author = "rivitna"
+        family = "ransomware.lokilocker"
+        description = "LokiLocker/BlackBit ransomware Windows"
+        severity = 7
+        score = 70
+
+    condition:
+        (uint16(0) == 0x5A4D) and (uint32(uint32(0x3C)) == 0x00004550) and
+        (filesize > 400000) and (filesize < 560000) and
+        ((pe.checksum == 0x00023BFB) or
+         (pe.timestamp == 0x5000A574) or
+         ((pe.data_directories[6].size == 28) and
+          (uint32(pe.rva_to_offset(pe.data_directories[6].virtual_address) + 4)
+           == 0x5000A574))) and
+        (pe.resources[0].type == pe.RESOURCE_TYPE_RCDATA) and
+        (pe.resources[0].name_string == "_\x00_\x00") and
+        (pe.resources[0].length > 250000) and
+        (pe.resources[0].length < 420000) and
+        (pe.resources[1].type == pe.RESOURCE_TYPE_RCDATA) and
+        (pe.resources[1].name_string == "~\x00") and
+        (pe.resources[1].length == 32)
+}

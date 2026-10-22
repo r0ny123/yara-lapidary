@@ -1,0 +1,20 @@
+{
+  "id": "secpriv_frameworks",
+  "source_url": "https://raw.githubusercontent.com/SecPriv/adapt/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar",
+  "html_url": "https://github.com/SecPriv/adapt/blob/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar",
+  "author": "SecPriv",
+  "license": "unspecified",
+  "techniques": [
+    "at-computed-offset",
+    "match-length",
+    "non-pe-module",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "fail",
+  "promoted_from": [
+    "2026-10-09.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

@@ -7,9 +7,13 @@ Runs the token-level code searches in QUERIES through the REST API (which
 takes literal tokens, not regexes), drops hits from forks after resolving
 them to the network source, pins each file to a commit, downloads it,
 compiles it with YARA-X and scores the rule text for advanced constructs.
-Writes <out>/candidates.md and <out>/candidates.json, and appends every
-examined repo/path to discovery/seen.json so later runs skip it. Never
-touches index/. Needs GH_TOKEN or GITHUB_TOKEN (code search requires auth).
+
+Identity is by content: files with the same normalized text are one rule.
+Copies already indexed or already examined are skipped, and among copies
+found in one run the original is chosen (see dedup.py). discovery/seen.json
+maps every examined repo:path to {date, sha256, canonical}. Writes
+<out>/candidates.md and <out>/candidates.json. Never touches index/.
+Needs GH_TOKEN or GITHUB_TOKEN (code search requires auth).
 """
 import argparse, json, os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 from datetime import date
@@ -17,9 +21,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from origin import api, resolve_repo  # noqa: E402
+from dedup import content_id, choose_original, foreign_copies  # noqa: E402
+from snapshot import body_of  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-INDEX, SEEN = ROOT / "index", ROOT / "discovery" / "seen.json"
+INDEX, RULES, SEEN = ROOT / "index", ROOT / "rules", ROOT / "discovery" / "seen.json"
 YR = os.environ.get("YR") or "yr"
 
 # Literal-token searches. Each targets a construct that only appears in rules
@@ -67,7 +73,6 @@ SIGNALS = [
     (r"\b(macho|elf|dotnet|lnk|dex)\.[a-z_]+", 1, "non-pe-module"),
 ]
 THRESHOLD = 4
-
 SEARCH_OK = 0
 
 def search(q):
@@ -78,19 +83,27 @@ def search(q):
             items = api(url).get("items", []); SEARCH_OK += 1; return items
         except urllib.error.HTTPError as e:
             if e.code in (403, 429) and attempt == 1:
-                # secondary rate limit: honor Retry-After (capped), then retry once
-                time.sleep(min(int(e.headers.get("Retry-After") or 60), 120)); continue
+                time.sleep(min(int(e.headers.get("Retry-After") or 60), 120)); continue  # secondary rate limit
             print(f"search failed ({e.code}) for {q}: code search needs a user token with public repo read "
                   f"(DISCOVERY_TOKEN); the Actions token is rate-limited to nothing", file=sys.stderr)
             return []
     return []
 
-def indexed_sources():
-    out = set()
+def load_seen():
+    """seen.json: repo:path -> {date, sha256, canonical}. Older string values are migrated."""
+    raw = json.loads(SEEN.read_text()) if SEEN.exists() else {}
+    return {k: (v if isinstance(v, dict) else {"date": v, "sha256": None, "canonical": None}) for k, v in raw.items()}
+
+def indexed():
+    """(repo:path) keys and content ids of everything already in index/ and rules/."""
+    keys, cids = set(), {}
     for p in INDEX.glob("*.json"):
-        m = re.match(r"https://raw\.githubusercontent\.com/([^/]+/[^/]+)/[^/]+/(.+)", json.loads(p.read_text())["source_url"])
-        if m: out.add((m.group(1).lower(), m.group(2)))
-    return out
+        e = json.loads(p.read_text())
+        m = re.match(r"https://raw\.githubusercontent\.com/([^/]+/[^/]+)/[^/]+/(.+)", e["source_url"])
+        if m: keys.add(f"{m.group(1).lower()}:{urllib.parse.unquote(m.group(2))}")
+        r = RULES / f"{e.get('id', p.stem)}.yar"
+        if r.exists(): cids[content_id(body_of(r.read_text(errors='replace')))] = e.get("id", p.stem)
+    return keys, cids
 
 def yr(*args):
     r = subprocess.run([YR, *args], capture_output=True, text=True); return r.returncode, r.stdout + r.stderr
@@ -102,6 +115,16 @@ def assess(text):
         if n: hits[tag] = n; score += w * min(n, 3)
     return score, hits
 
+def compile_info(out, text):
+    tmp = out / "cand.yar"; tmp.write_text(text)
+    chk = yr("check", str(tmp))[1]; diags = sorted(set(re.findall(r"^(?:error|warning)\[([A-Za-z0-9_]+)\]", chk, re.M)))
+    status = "fail" if "[ FAIL ]" in chk else ("warn" if diags else "pass")
+    rc, at = yr("debug", "atoms", "--json", str(tmp)); min_atom = None
+    if rc == 0 and at.strip().startswith("["):
+        lens = [len(x) // 2 for e in json.loads(at) for x in e["atoms"]]; min_atom = min(lens) if lens else 0
+    tmp.unlink(missing_ok=True)
+    return status, diags, min_atom
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-queries", type=int, default=len(QUERIES))
@@ -109,67 +132,84 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "report"))
     a = ap.parse_args()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
-    seen = json.loads(SEEN.read_text()) if SEEN.exists() else {}
-    known = indexed_sources()
+    seen = load_seen(); known_keys, known_cids = indexed()
+    seen_cids = {v["sha256"]: v["canonical"] or k for k, v in seen.items() if v.get("sha256")}
+    today = date.today().isoformat()
+
     hits = {}
     for q in QUERIES[: a.max_queries]:
         for it in search(q):
             repo = it["repository"]; key = f"{repo['full_name'].lower()}:{it['path']}"
-            if repo.get("private"): continue   # a user token can see private repos; the index is public only
-            if key in seen or (repo["full_name"].lower(), it["path"]) in known: continue
-            hits.setdefault(key, {"repo": repo["full_name"], "path": it["path"], "fork": repo.get("fork", False),
-                                  "html_url": it["html_url"], "queries": []})["queries"].append(q.split(" language")[0])
+            if repo.get("private") or key in seen or key in known_keys: continue
+            hits.setdefault(key, {"repo": repo["full_name"], "path": it["path"], "html_url": it["html_url"],
+                                  "queries": []})["queries"].append(q.split(" language")[0])
         time.sleep(8)   # code search secondary limits bite well below the documented 30/min
     print(f"{len(hits)} unseen hits from {min(a.max_queries, len(QUERIES))} queries ({SEARCH_OK} succeeded)", file=sys.stderr)
     if SEARCH_OK == 0:
         sys.exit("every search failed; nothing examined, seen.json untouched")
-    ranked = sorted(hits.values(), key=lambda h: -len(h["queries"]))[: a.max_candidates]
-    cands, today = [], date.today().isoformat()
-    for h in ranked:
-        key = f"{h['repo'].lower()}:{h['path']}"; seen[key] = today
+
+    # resolve, fetch and group by content
+    groups = {}   # content id -> {"text", "copies": [ {repo, path, resolved, html_url, queries} ]}
+    for h in sorted(hits.values(), key=lambda h: -len(h["queries"]))[: a.max_candidates]:
+        key = f"{h['repo'].lower()}:{h['path']}"
         try:
             owner, repo = h["repo"].split("/")
             r = resolve_repo(owner, repo, "HEAD", h["path"])
-            origin_key = r["source_url"].split("/")[3].lower() + "/" + r["source_url"].split("/")[4].lower()
-            if (origin_key, h["path"]) in known or f"{origin_key}:{h['path']}" in seen and origin_key != h["repo"].lower():
-                continue
-            seen[f"{origin_key}:{h['path']}"] = today
             req = urllib.request.Request(r["source_url"], headers={"User-Agent": "yara-lapidary/1.0"})
             text = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
         except Exception as ex:
+            seen[key] = {"date": today, "sha256": None, "canonical": None}
             print(f"skip {h['repo']}/{h['path']}: {ex}", file=sys.stderr); continue
+        cid = content_id(text)
+        if cid in known_cids or cid in seen_cids:
+            seen[key] = {"date": today, "sha256": cid, "canonical": known_cids.get(cid) or seen_cids[cid]}
+            continue
+        g = groups.setdefault(cid, {"text": text, "copies": []})
+        g["copies"].append({**h, "resolved": r, "key": key})
+
+    # copies stored under another owner's name (or whose meta names another owner) are not candidates
+    allc = [c for g in groups.values() for c in g["copies"]]
+    foreign = foreign_copies(allc, {i: next(g["text"] for g in groups.values() if c in g["copies"]) for i, c in enumerate(allc)})
+    for i, o in foreign.items():
+        c = allc[i]; seen[c["key"]] = {"date": today, "sha256": None, "canonical": f"copy of {o}'s {c['path'].split('/')[-1]}"}
+        for g in groups.values():
+            if c in g["copies"]: g["copies"].remove(c)
+    groups = {cid: g for cid, g in groups.items() if g["copies"]}
+    cands = []
+    for cid, g in groups.items():
+        orig, reason = choose_original(g["copies"], g["text"])
+        for c in g["copies"]:
+            seen[c["key"]] = {"date": today, "sha256": cid, "canonical": orig["key"]}
+        text = g["text"]
         score, sig = assess(text)
         rules = len(re.findall(r"^\s*(?:private\s+|global\s+)?rule\s+\w+", text, re.M))
-        # score per rule, so a 300-rule collection with one clever rule does not outrank a single clever rule
-        density = round(score / max(rules, 1), 1)
+        density = round(score / max(rules, 1), 1)   # per rule, so collections do not outrank single clever rules
         if score < THRESHOLD or density < 1.0: continue
-        tmp = out / "cand.yar"; tmp.write_text(text)
-        chk = yr("check", str(tmp))[1]; diags = sorted(set(re.findall(r"^(?:error|warning)\[([A-Za-z0-9_]+)\]", chk, re.M)))
-        status = "fail" if "[ FAIL ]" in chk else ("warn" if diags else "pass")
-        rc2, at = yr("debug", "atoms", "--json", str(tmp)); min_atom = None
-        if rc2 == 0 and at.strip().startswith("["):
-            lens = [len(x) // 2 for e in json.loads(at) for x in e["atoms"]]; min_atom = min(lens) if lens else 0
-        cands.append({**r, "repo": h["repo"], "path": h["path"], "from_fork": bool(r.get("origin_note")), "score": score, "density": density,
-                      "signals": sig, "status": status, "diagnostics": diags, "min_atom": min_atom, "rules": rules,
-                      "queries": h["queries"]})
-    tmp = out / "cand.yar"; tmp.unlink(missing_ok=True)
+        status, diags, min_atom = compile_info(out, text)
+        r = orig["resolved"]
+        cands.append({**r, "repo": orig["repo"], "path": orig["path"], "from_fork": bool(r.get("origin_note")),
+                      "content_id": cid, "copies": [c["key"] for c in g["copies"] if c is not orig], "origin_reason": reason,
+                      "score": score, "density": density, "signals": sig, "status": status, "diagnostics": diags,
+                      "min_atom": min_atom, "rules": rules, "queries": sorted({q for c in g["copies"] for q in c["queries"]})})
+
     cands.sort(key=lambda c: (-c["density"], -c["score"]))
     (out / "candidates.json").write_text(json.dumps(cands, indent=2))
     SEEN.parent.mkdir(exist_ok=True); SEEN.write_text(json.dumps(seen, indent=2, sort_keys=True) + "\n")
-    md = [f"# Discovery candidates {today}\n", f"{len(cands)} candidates scoring >= {THRESHOLD} out of {len(ranked)} examined hits. "
-          "Review each, then add the ones worth keeping to `index/` with the JSON below. "
-          "Collections that copy other people's rules are not forks and pass the origin check: read the rule's "
-          "`author`/`reference` meta and index the author's own repository instead.\n",
-          "| score/rule | score | status | rules | min atom | source | signals |", "|---|---|---|---|---|---|---|"]
+    md = [f"# Discovery candidates {today}\n",
+          f"{len(cands)} distinct rules scoring >= {THRESHOLD} from {sum(len(g['copies']) for g in groups.values())} examined files "
+          f"({len(groups)} distinct by content). Copies are attributed to one origin; see the copies column. "
+          "Review, then run `scripts/promote.py` or add entries by hand.\n",
+          "| score/rule | score | status | rules | min atom | origin | copies | signals |", "|---|---|---|---|---|---|---|---|"]
     for c in cands:
         am = "n/a" if c["min_atom"] is None else f"{c['min_atom']}B"
-        md.append(f"| {c['density']} | {c['score']} | {c['status']} {', '.join(c['diagnostics'])} | {c['rules']} | {am} | [{c['repo']}/{c['path']}]({c['html_url']})"
-                  f"{' (fork resolved)' if c['from_fork'] else ''} | {', '.join(f'{k}:{v}' for k, v in c['signals'].items())} |")
+        md.append(f"| {c['density']} | {c['score']} | {c['status']} {', '.join(c['diagnostics'])} | {c['rules']} | {am} | "
+                  f"[{c['repo']}/{c['path']}]({c['html_url']}) ({c['origin_reason']}) | {len(c['copies'])} | "
+                  f"{', '.join(f'{k}:{v}' for k, v in c['signals'].items())} |")
     md.append("\n## Entry skeletons\n")
     for c in cands:
         eid = re.sub(r"[^a-z0-9]+", "_", f"{c['author']}_{Path(c['path']).stem}".lower()).strip("_")
         md.append("```json\n" + json.dumps({"id": eid, "source_url": c["source_url"], "html_url": c["html_url"], "author": c["author"],
-                  "license": c["license"], "techniques": sorted(c["signals"]), "notes": "", "expect": c["status"] if c["status"] != "fail" else "fail"}, indent=2) + "\n```")
+                  "license": c["license"], "techniques": sorted(c["signals"]), "notes": "", "expect": c["status"]}, indent=2) + "\n```")
     (out / "candidates.md").write_text("\n".join(md) + "\n")
     print("\n".join(md[:4 + len(cands)]))
 

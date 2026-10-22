@@ -1,0 +1,21 @@
+{
+  "id": "sekoia_io_dropper_win_ninerat",
+  "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+  "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/dropper_win_ninerat.yar",
+  "author": "SEKOIA-IO",
+  "license": "NOASSERTION",
+  "techniques": [
+    "content-hash-range",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: earliest first commit (2024-12-19). Review the technique tags. Same filename also under R4z1xx/yara-collection, ShobhitMishra-bot/Android-Yara-Rules; content differs, verify which is the author's.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [
+    "R4z1xx/yara-collection/SEKOIA-IO/dropper_win_ninerat.yar",
+    "ShobhitMishra-bot/Android-Yara-Rules/7/dropper_win_ninerat.yar"
+  ],
+  "fetched": "2026-10-22"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "f6_dfir_lokilocker",
+  "source_url": "https://raw.githubusercontent.com/f6-dfir/Ransomware/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar",
+  "html_url": "https://github.com/f6-dfir/Ransomware/blob/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar",
+  "author": "f6-dfir",
+  "license": "Apache-2.0",
+  "techniques": [
+    "header-arithmetic",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "pass",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

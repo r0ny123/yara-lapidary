@@ -1,0 +1,21 @@
+{
+  "id": "juanandresgs_sta_voltron_0xfancyfilter",
+  "source_url": "https://raw.githubusercontent.com/juanandresgs/YARA/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara",
+  "html_url": "https://github.com/juanandresgs/YARA/blob/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara",
+  "author": "juanandresgs",
+  "license": "unspecified",
+  "techniques": [
+    "content-hash-range",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags. Same filename also under MeisamEb/Repository-of-yara-rules, MyMel2001/Sneed-Reactivity, mikesxrs/Open-Source-YARA-rules; content differs, verify which is the author's.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [
+    "MyMel2001/Sneed-Reactivity/yara-mikesxrs/juanandresgs/sta_Voltron_0xFancyFilter.yara",
+    "mikesxrs/Open-Source-YARA-rules/juanandresgs/sta_Voltron_0xFancyFilter.yara"
+  ],
+  "fetched": "2026-10-22"
+}

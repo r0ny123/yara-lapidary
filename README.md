@@ -63,6 +63,22 @@ containing the candidate table, entry skeletons and the updated seen list.
 The workflow never writes to `index/`; promoting a candidate is a human
 decision made in the pull request.
 
+Identity is by content, not by path. `scripts/dedup.py` hashes the
+normalized rule text, so a rule copied into several collection repositories
+is examined once and attributed to one origin: the repository the rule's
+own meta names, otherwise the one that does not store the file under
+another owner's name, otherwise the earliest first commit. Copies stored
+under a directory or filename prefix naming another owner are dropped before
+grouping. `discovery/seen.json` records every examined `repo:path` with its
+content hash and the canonical origin, so reruns skip copies as well as
+exact paths.
+
+`scripts/promote.py` turns reviewed candidate reports into entries: it
+collapses records to one per path (latest run), drops copies, groups by
+content, picks the origin, skips anything already indexed, and writes
+`index/<id>.json` plus `rules/<id>.yar`. Entries record `promoted_from`,
+`copies` and the reason the origin was chosen. Use `--dry-run` first.
+
 Code search needs a user token. Add a fine-grained personal access token
 with public repository read access as the `DISCOVERY_TOKEN` secret; without
 it the workflow tries the Actions token, which GitHub may refuse. If the

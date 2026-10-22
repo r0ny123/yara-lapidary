@@ -1,0 +1,18 @@
+{
+  "id": "meisameb_sta_voltron_0xfancyfilter",
+  "source_url": "https://raw.githubusercontent.com/MeisamEb/Repository-of-yara-rules/a9f3a10ceb41bbe1d7dee24f4b2b239734c3de98/generic/sta_Voltron_0xFancyFilter.yara",
+  "html_url": "https://github.com/MeisamEb/Repository-of-yara-rules/blob/a9f3a10ceb41bbe1d7dee24f4b2b239734c3de98/generic/sta_Voltron_0xFancyFilter.yara",
+  "author": "MeisamEb",
+  "license": "unspecified",
+  "techniques": [
+    "content-hash-range",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags. Same filename also under MyMel2001/Sneed-Reactivity, juanandresgs/YARA, mikesxrs/Open-Source-YARA-rules; content differs, verify which is the author's.",
+  "expect": "fail",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

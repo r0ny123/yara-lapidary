@@ -1,0 +1,21 @@
+{
+  "id": "kamisara_ole_lnk_internetexplorer_idlist_suspicious",
+  "source_url": "https://raw.githubusercontent.com/kamisara/AI-malware-sandbox/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+  "html_url": "https://github.com/kamisara/AI-malware-sandbox/blob/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+  "author": "kamisara",
+  "license": "NOASSERTION",
+  "techniques": [
+    "match-offset-arithmetic",
+    "read-arithmetic"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: earliest first commit (2026-02-14). Review the technique tags. Same filename also under Ununp3ntium115/Custom-Yara-Rules; content differs, verify which is the author's.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-13-38420356874.json"
+  ],
+  "copies": [
+    "Ununp3ntium115/Custom-Yara-Rules/sources/yaraify-abusech/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
+    "kamisara/AI-malware-sandbox/rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar"
+  ],
+  "fetched": "2026-10-22"
+}

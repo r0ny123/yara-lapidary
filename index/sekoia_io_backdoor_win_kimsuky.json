@@ -1,0 +1,17 @@
+{
+  "id": "sekoia_io_backdoor_win_kimsuky",
+  "source_url": "https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_kimsuky.yar",
+  "html_url": "https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_kimsuky.yar",
+  "author": "SEKOIA-IO",
+  "license": "NOASSERTION",
+  "techniques": [
+    "content-hash-range"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-13-38420356874.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

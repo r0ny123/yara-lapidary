@@ -1,0 +1,20 @@
+{
+  "id": "reversinglabs_antidebugging_stringcopyaccessviolation_1",
+  "source_url": "https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara",
+  "html_url": "https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "techniques": [
+    "match-length",
+    "match-offset-arithmetic",
+    "module-iterator",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-09.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

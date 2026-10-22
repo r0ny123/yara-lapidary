@@ -1,0 +1,21 @@
+{
+  "id": "100daysofyara_day_024",
+  "source_url": "https://raw.githubusercontent.com/100DaysofYARA/2024/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar",
+  "html_url": "https://github.com/100DaysofYARA/2024/blob/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar",
+  "author": "100DaysofYARA",
+  "license": "MIT",
+  "techniques": [
+    "header-arithmetic",
+    "pe-structure"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: earliest first commit (2024-01-31). Review the technique tags. Same filename also under qqbgxi/MalwareDetectionTool; content differs, verify which is the author's.",
+  "expect": "warn",
+  "promoted_from": [
+    "2026-10-09.json"
+  ],
+  "copies": [
+    "qqbgxi/MalwareDetectionTool/rules/yara/100 Days of YARA/2024-main/qutluch/Day_024.yar",
+    "qqbgxi/MalwareDetectionTool/rules/yara/Day_024.yar"
+  ],
+  "fetched": "2026-10-22"
+}

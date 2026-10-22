@@ -1,0 +1,19 @@
+{
+  "id": "chainguard_dev_exclamation",
+  "source_url": "https://raw.githubusercontent.com/chainguard-dev/malcontent/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+  "html_url": "https://github.com/chainguard-dev/malcontent/blob/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara",
+  "author": "chainguard-dev",
+  "license": "Apache-2.0",
+  "techniques": [
+    "capped-loop",
+    "match-length",
+    "match-offset-arithmetic"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.",
+  "expect": "pass",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [],
+  "fetched": "2026-10-22"
+}

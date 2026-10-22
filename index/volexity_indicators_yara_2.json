@@ -1,0 +1,21 @@
+{
+  "id": "volexity_indicators_yara_2",
+  "source_url": "https://raw.githubusercontent.com/volexity/threat-intel/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+  "html_url": "https://github.com/volexity/threat-intel/blob/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar",
+  "author": "volexity",
+  "license": "NOASSERTION",
+  "techniques": [
+    "capped-loop",
+    "match-offset-arithmetic",
+    "pattern-in-window"
+  ],
+  "notes": "Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags. Same filename also under sudesh0sudesh/GithubIOC_Collector; content differs, verify which is the author's.",
+  "expect": "pass",
+  "promoted_from": [
+    "2026-10-20-39426229444.json"
+  ],
+  "copies": [
+    "sudesh0sudesh/GithubIOC_Collector/repositories/volexity_threat-intel/original_files/2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar"
+  ],
+  "fetched": "2026-10-22"
+}
