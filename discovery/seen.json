@@ -294,23 +294,27 @@
     "sha256": null
   },
   "r0ny123/yara-lapidary:rules/gles_100days_of_yara.yar": {
-    "canonical": "r0ny123/yara-lapidary:rules/gles_100days_of_yara.yar",
+    "canonical": null,
     "date": "2026-10-22",
+    "rejected": "own vendored copy",
     "sha256": "3878fed21f01c0c75591ee2073150bfde5cfa4c9cebec7f8070e69db54380030"
   },
   "r0ny123/yara-lapidary:rules/hydradragonantivirus_hidden_slow_rules.yar": {
-    "canonical": "r0ny123/yara-lapidary:rules/hydradragonantivirus_hidden_slow_rules.yar",
+    "canonical": null,
     "date": "2026-10-22",
+    "rejected": "own vendored copy",
     "sha256": "2132213f41d42eeab5ea302635aa07fa5a2fd7b89ef2f633c4484aa4dce17d68"
   },
   "r0ny123/yara-lapidary:rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar": {
-    "canonical": "r0ny123/yara-lapidary:rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar",
+    "canonical": null,
     "date": "2026-10-22",
+    "rejected": "own vendored copy",
     "sha256": "df347ce4ab15bcab1eb27894db33783bb3773bf7e577ae3d7396950d896c047a"
   },
   "r0ny123/yara-lapidary:rules/notareverser_100days_rules.yar": {
-    "canonical": "r0ny123/yara-lapidary:rules/notareverser_100days_rules.yar",
+    "canonical": null,
     "date": "2026-10-22",
+    "rejected": "own vendored copy",
     "sha256": "0fd70189a1f608dd2a6e0079ce5d544f65755566b84d750dfc9df2f5072c1305"
   },
   "r4z1xx/yara-collection:SEKOIA-IO/backdoor_win_mgbot_main.yar": {

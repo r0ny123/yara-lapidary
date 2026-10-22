@@ -27,6 +27,8 @@ from snapshot import body_of  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 INDEX, RULES, SEEN = ROOT / "index", ROOT / "rules", ROOT / "discovery" / "seen.json"
 YR = os.environ.get("YR") or "yr"
+# This repository's own vendored copies are indexed by code search too; never propose them back.
+SELF_REPOS = {r.lower() for r in (os.environ.get("GITHUB_REPOSITORY", ""), "r0ny123/yara-lapidary") if r}
 
 # Literal-token searches. Each targets a construct that only appears in rules
 # that parse structure or relate matches to each other.
@@ -140,7 +142,8 @@ def main():
     for q in QUERIES[: a.max_queries]:
         for it in search(q):
             repo = it["repository"]; key = f"{repo['full_name'].lower()}:{it['path']}"
-            if repo.get("private") or key in seen or key in known_keys: continue
+            if repo.get("private") or repo["full_name"].lower() in SELF_REPOS: continue
+            if key in seen or key in known_keys: continue
             hits.setdefault(key, {"repo": repo["full_name"], "path": it["path"], "html_url": it["html_url"],
                                   "queries": []})["queries"].append(q.split(" language")[0])
         time.sleep(8)   # code search secondary limits bite well below the documented 30/min
@@ -156,7 +159,7 @@ def main():
             owner, repo = h["repo"].split("/")
             r = resolve_repo(owner, repo, "HEAD", h["path"])
             req = urllib.request.Request(r["source_url"], headers={"User-Agent": "yara-lapidary/1.0"})
-            text = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+            text = body_of(urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace"))  # strip any provenance header a re-vendored copy carries
         except Exception as ex:
             seen[key] = {"date": today, "sha256": None, "canonical": None}
             print(f"skip {h['repo']}/{h['path']}: {ex}", file=sys.stderr); continue
