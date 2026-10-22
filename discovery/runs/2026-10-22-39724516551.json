@@ -1,0 +1,259 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/CYB3RMX/Qu1cksc0pe/1020c98c4eff580c5c4b0c2856a5267c808ec3d8/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "html_url": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/1020c98c4eff580c5c4b0c2856a5267c808ec3d8/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "author": "CYB3RMX",
+    "license": "GPL-3.0",
+    "origin_note": "",
+    "repo": "CYB3RMX/Qu1cksc0pe",
+    "path": "Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "from_fork": false,
+    "content_id": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4",
+    "copies": [
+      "thevantadev/congnidroid:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+      "varnikabajpai4/ctrl_alt_elite_hack8:main/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+      "varnikabajpai4/ctrl_alt_elite_hack8:ember/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara"
+    ],
+    "origin_reason": "earliest first commit (2023-04-12)",
+    "score": 12,
+    "density": 12.0,
+    "signals": {
+      "match-offset-arithmetic": 7,
+      "nested-loop": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "duplicate_pattern_value",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint32(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/r0ny123/yara-lapidary/6e8f4cd4ba69f1f8c5058c1352fb3a026c376c76/rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar",
+    "html_url": "https://github.com/r0ny123/yara-lapidary/blob/6e8f4cd4ba69f1f8c5058c1352fb3a026c376c76/rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar",
+    "author": "r0ny123",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "r0ny123/yara-lapidary",
+    "path": "rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar",
+    "from_fork": false,
+    "content_id": "df347ce4ab15bcab1eb27894db33783bb3773bf7e577ae3d7396950d896c047a",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 11,
+    "density": 11.0,
+    "signals": {
+      "match-offset-arithmetic": 46,
+      "read-arithmetic": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/MuziSec/yara/57ae9ee2cf59a1502c58364b1c667aa656ef7f58/SPLCrypt.yar",
+    "html_url": "https://github.com/MuziSec/yara/blob/57ae9ee2cf59a1502c58364b1c667aa656ef7f58/SPLCrypt.yar",
+    "author": "MuziSec",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "MuziSec/yara",
+    "path": "SPLCrypt.yar",
+    "from_fork": false,
+    "content_id": "26fa8c00d4a1893ad2b7e0bdf6589097b383713ffcd0ed6594aa11e35d9dfeee",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 8,
+    "density": 8.0,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "pattern-in-window": 1,
+      "hex-alternatives": 7
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"@\" \"in (@\"",
+      "\"for any of\" \"uint32(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/NVISOsecurity/nviso-cti/3dd815d6b0f7bc4d0da4005e9e21470900b9439e/Epic_Manchego_IOC/bmp_steganography.yar",
+    "html_url": "https://github.com/NVISOsecurity/nviso-cti/blob/3dd815d6b0f7bc4d0da4005e9e21470900b9439e/Epic_Manchego_IOC/bmp_steganography.yar",
+    "author": "NVISOsecurity",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "NVISOsecurity/nviso-cti",
+    "path": "Epic_Manchego_IOC/bmp_steganography.yar",
+    "from_fork": false,
+    "content_id": "fa13dede4ade83d6381fbef53e0f720c7d58b9ffcbe9919667f3b64380b25a7c",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 12,
+    "density": 6.0,
+    "signals": {
+      "match-offset-arithmetic": 14,
+      "non-pe-module": 8
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field",
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 2,
+    "queries": [
+      "\"@\" \"in (@\"",
+      "\"with \" \"dotnet.\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/Neo23x0/signature-base/572159945cf067986ef2242c83edda9211b8a975/yara/apt_winnti_br.yar",
+    "html_url": "https://github.com/Neo23x0/signature-base/blob/572159945cf067986ef2242c83edda9211b8a975/yara/apt_winnti_br.yar",
+    "author": "Neo23x0",
+    "license": "NOASSERTION",
+    "origin_note": "",
+    "repo": "Neo23x0/signature-base",
+    "path": "yara/apt_winnti_br.yar",
+    "from_fork": false,
+    "content_id": "1c7c81badeee07f09a3551b98015b9fe34c7dd05b8b90a6a0fad190a3caa514b",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 17,
+    "density": 5.7,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "pe-structure": 2,
+      "at-computed-offset": 1,
+      "pattern-in-window": 2
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 3,
+    "queries": [
+      "\"@\" \"in (@\"",
+      "\"overlay.offset\" \"uint16\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/filescanio/fsYara-original/b79ac8ba9ca9e14843e9f5d0d89a07d6f9bb06b7/executable/PE-ELF/generic/mwlab-pe-anomalies.yar",
+    "html_url": "https://github.com/filescanio/fsYara-original/blob/b79ac8ba9ca9e14843e9f5d0d89a07d6f9bb06b7/executable/PE-ELF/generic/mwlab-pe-anomalies.yar",
+    "author": "filescanio",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "filescanio/fsYara-original",
+    "path": "executable/PE-ELF/generic/mwlab-pe-anomalies.yar",
+    "from_fork": false,
+    "content_id": "d0bf743d37e01800d054daa6ab421ae571946712abf16f35dfb5bf7385937a73",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 29,
+    "density": 2.4,
+    "signals": {
+      "match-offset-arithmetic": 2,
+      "nested-loop": 1,
+      "module-iterator": 17,
+      "read-arithmetic": 3,
+      "entropy-range": 1,
+      "pe-structure": 20,
+      "non-pe-module": 6
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 12,
+    "queries": [
+      "\"overlay.offset\" \"uint16\"",
+      "\"with \" \"dotnet.\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/r0ny123/yara-lapidary/f1c549dfc2a459766a24a149236e15016a42aab8/rules/notareverser_100days_rules.yar",
+    "html_url": "https://github.com/r0ny123/yara-lapidary/blob/f1c549dfc2a459766a24a149236e15016a42aab8/rules/notareverser_100days_rules.yar",
+    "author": "r0ny123",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "r0ny123/yara-lapidary",
+    "path": "rules/notareverser_100days_rules.yar",
+    "from_fork": false,
+    "content_id": "0fd70189a1f608dd2a6e0079ce5d544f65755566b84d750dfc9df2f5072c1305",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 19,
+    "density": 1.4,
+    "signals": {
+      "match-offset-arithmetic": 3,
+      "read-arithmetic": 1,
+      "pe-structure": 3,
+      "at-computed-offset": 1,
+      "hex-alternatives": 6
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 14,
+    "queries": [
+      "\"for any of\" \"uint32(@\"",
+      "\"for any of\" \"uint8(@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/r0ny123/yara-lapidary/6e8f4cd4ba69f1f8c5058c1352fb3a026c376c76/rules/hydradragonantivirus_hidden_slow_rules.yar",
+    "html_url": "https://github.com/r0ny123/yara-lapidary/blob/6e8f4cd4ba69f1f8c5058c1352fb3a026c376c76/rules/hydradragonantivirus_hidden_slow_rules.yar",
+    "author": "r0ny123",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "r0ny123/yara-lapidary",
+    "path": "rules/hydradragonantivirus_hidden_slow_rules.yar",
+    "from_fork": false,
+    "content_id": "2132213f41d42eeab5ea302635aa07fa5a2fd7b89ef2f633c4484aa4dce17d68",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 52,
+    "density": 1.1,
+    "signals": {
+      "match-offset-arithmetic": 90,
+      "match-length": 20,
+      "nested-loop": 23,
+      "module-iterator": 16,
+      "read-arithmetic": 66,
+      "content-hash-range": 2,
+      "pattern-in-window": 5,
+      "hex-alternatives": 3
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 47,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  }
+]

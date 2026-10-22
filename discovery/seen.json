@@ -1,14 +1,39 @@
 {
+  "0x0be/pepper:rules/Packers/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "100daysofyara/2023:bitsofbinary/MAL_AcidBox.yar": {
+    "canonical": "100daysofyara/2023:bitsofbinary/MAL_AcidBox.yar",
+    "date": "2026-10-22",
+    "sha256": "856a6241e38999876377406c8612a863ae9b1b35e6ee1a1c78a8cab30fd928c0"
+  },
   "100daysofyara/2024:qutluch/Day_024.yar": {
     "canonical": "100daysofyara/2024:qutluch/Day_024.yar",
     "date": "2026-10-09",
     "indexed_as": "100daysofyara_day_024",
     "sha256": "41f593d355bbd469e2d785f9ab312794c10fe87bc979d29955a09caaba77e497"
   },
+  "2367765883/hephaestus-terminal-management:yararules/packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "4rthur-root/nyx:engine/rules/yara/susp_mal_pe.yar": {
+    "canonical": "4rthur-root/nyx:engine/rules/yara/susp_mal_pe.yar",
+    "date": "2026-10-22",
+    "sha256": "9209428b271964c14da14b1bc845e06edbd22e94c214a9b5dd5ab27accc0663b"
+  },
   "abathur/binlore:execers.yar": {
     "canonical": null,
     "date": "2026-10-13",
     "sha256": null
+  },
+  "appsecrani/malert:src/rules/packers/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
   },
   "byte5digital/agentsweep:rules/0005-credential-path-with-egress/rule.yar": {
     "canonical": "byte5digital/agentsweep:rules/0005-credential-path-with-egress/rule.yar",
@@ -64,10 +89,25 @@
     "indexed_as": "chainguard_dev_exclamation",
     "sha256": "d881a7b368b7f80994431010fcccb462f956073a2a2053b0bec324923e390809"
   },
+  "cleverparrot95/p-edr-arch:YARA_rules/packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
   "cyb3rmx/qu1cksc0pe:Systems/Linux/YaraRules_Linux/volexity_2024-01-10_Ivanti_Connect_Secure.yar": {
     "canonical": "copy of volexity's volexity_2024-01-10_ivanti_connect_secure.yar",
     "date": "2026-10-13",
     "sha256": "ef437b5c7fa3154b48132af5f3292775640ad7c56eb7c62f3b706e1310bc3489"
+  },
+  "cyb3rmx/qu1cksc0pe:Systems/Multiple/Packer_Rules/packer_compiler_signatures.yara": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara": {
+    "canonical": "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "date": "2026-10-22",
+    "sha256": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4"
   },
   "cyb3rmx/qu1cksc0pe:Systems/OSX/YaraRules_OSX/volexity_2024-02-13_CharmingCypress.yar": {
     "canonical": null,
@@ -85,11 +125,46 @@
     "indexed_as": "f6_dfir_lokilocker",
     "sha256": "35af15d9b1a8b6d6b70b19e78e89149f204bf5b1f2d6b64dc511b48d28468a8c"
   },
+  "filescanio/fsyara-original:executable/PE-ELF/generic/mwlab-pe-anomalies.yar": {
+    "canonical": "filescanio/fsyara-original:executable/PE-ELF/generic/mwlab-pe-anomalies.yar",
+    "date": "2026-10-22",
+    "sha256": "d0bf743d37e01800d054daa6ab421ae571946712abf16f35dfb5bf7385937a73"
+  },
   "fox-it/dissect.cobaltstrike:scripts/obfuscated-beacon.yar": {
     "canonical": "fox-it/dissect.cobaltstrike:scripts/obfuscated-beacon.yar",
     "date": "2026-10-20",
     "indexed_as": "fox_it_obfuscated_beacon",
     "sha256": "3bc798738825b6a6ffc5fc6bd4bef627af96ce0c0d7cf8e24c001dac5e8fe38e"
+  },
+  "fr0gger/unprotect:module/yara-rules/compiler.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "fr0gger/unprotect:windows_unprotect/module/yara-rules/compiler.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "fr0gger/yara-unprotect:compiler.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "guelfoweb/peframe:peframe/signatures/yara_plugins/pe/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "horsicq/detect-it-easy:yara_rules/packer_compiler_signatures.yar": {
+    "canonical": "horsicq/detect-it-easy:yara_rules/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "b44e70541f13fcd69188e856242cc9c6d526b5438170fb38b7dc7a073c525a01"
+  },
+  "horsicq/xyara:yara_rules/packer_compiler_signatures.yar": {
+    "canonical": "horsicq/xyara:yara_rules/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "35149940fac5b7ac29ee1c3b14fe73a466cb1ff64a99991ee90fc4a63c0db274"
   },
   "hydradragonantivirus/hydradragonantivirus:hydradragon/yara-x/hidden_slow_rules.yar": {
     "canonical": "hydradragonantivirus/hydradragonantivirus:hydradragon/yara-x/hidden_slow_rules.yar",
@@ -103,6 +178,16 @@
     "indexed_as": "juanandresgs_sta_voltron_0xfancyfilter",
     "sha256": "00183bfd0bb9414cac79713d8b85eda436038f4be33db55784188f639d098a6c"
   },
+  "jumarf123/bamview:yara/clicker.yar": {
+    "canonical": "jumarf123/bamview:yara/clicker.yar",
+    "date": "2026-10-22",
+    "sha256": "281b53f3a9e079c39c304205030d4d4e61d260e700c8eb2a63915ac55a89b9f7"
+  },
+  "kalium/snakepit:viper/data/yara/Packers/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
   "kamisara/ai-malware-sandbox:rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar": {
     "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
     "date": "2026-10-13",
@@ -114,6 +199,21 @@
     "date": "2026-10-13",
     "indexed_as": "kamisara_ole_lnk_internetexplorer_idlist_suspicious",
     "sha256": "9d74a419eeed47f140db5a5faa850cebe7960316c42b491d4ca0e8b857575a17"
+  },
+  "kart1keya/hachi:yara_sigs/file/compiler.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "kirandawadi/volatility3-mcp:rules/packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "lprat/static_file_analysis:yara_rules1/winpe.yar": {
+    "canonical": "lprat/static_file_analysis:yara_rules1/winpe.yar",
+    "date": "2026-10-22",
+    "sha256": "65ef274035b511d2aec90758feb0ad79f06b0411851f77936bca09a8dd7a6fdd"
   },
   "luroi24/yaralab:remote/rules/separated_rules/MEMORY.yar": {
     "canonical": null,
@@ -141,10 +241,35 @@
     "date": "2026-10-20",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
   },
+  "mrphrazer/agentic-malware-analysis:agent_helpers/claude/skills/malware-analysis-orchestrator/assets/yara_rules/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "mrphrazer/agentic-malware-analysis:agent_helpers/codex/skills/malware-analysis-orchestrator/assets/yara_rules/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "muzisec/yara:SPLCrypt.yar": {
+    "canonical": "muzisec/yara:SPLCrypt.yar",
+    "date": "2026-10-22",
+    "sha256": "26fa8c00d4a1893ad2b7e0bdf6589097b383713ffcd0ed6594aa11e35d9dfeee"
+  },
   "mymel2001/sneed-reactivity:yara-mikesxrs/juanandresgs/sta_Voltron_0xFancyFilter.yara": {
     "canonical": "copy of juanandresgs's sta_voltron_0xfancyfilter.yara",
     "date": "2026-10-20",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
+  },
+  "neo23x0/signature-base:yara/apt_winnti_br.yar": {
+    "canonical": "neo23x0/signature-base:yara/apt_winnti_br.yar",
+    "date": "2026-10-22",
+    "sha256": "1c7c81badeee07f09a3551b98015b9fe34c7dd05b8b90a6a0fad190a3caa514b"
+  },
+  "nvisosecurity/nviso-cti:Epic_Manchego_IOC/bmp_steganography.yar": {
+    "canonical": "nvisosecurity/nviso-cti:Epic_Manchego_IOC/bmp_steganography.yar",
+    "date": "2026-10-22",
+    "sha256": "fa13dede4ade83d6381fbef53e0f720c7d58b9ffcbe9919667f3b64380b25a7c"
   },
   "plyara/plyara:tests/data/common/test_rules_from_yara_project.yar": {
     "canonical": null,
@@ -162,6 +287,31 @@
     "date": "2026-10-09",
     "indexed_as": "100daysofyara_day_024",
     "sha256": "41f593d355bbd469e2d785f9ab312794c10fe87bc979d29955a09caaba77e497"
+  },
+  "qqbgxi/malwaredetectiontool:rules/yara/MAL_AcidBox.yar": {
+    "canonical": "copy of 100daysofyara's MAL_AcidBox.yar",
+    "date": "2026-10-22",
+    "sha256": null
+  },
+  "r0ny123/yara-lapidary:rules/gles_100days_of_yara.yar": {
+    "canonical": "r0ny123/yara-lapidary:rules/gles_100days_of_yara.yar",
+    "date": "2026-10-22",
+    "sha256": "3878fed21f01c0c75591ee2073150bfde5cfa4c9cebec7f8070e69db54380030"
+  },
+  "r0ny123/yara-lapidary:rules/hydradragonantivirus_hidden_slow_rules.yar": {
+    "canonical": "r0ny123/yara-lapidary:rules/hydradragonantivirus_hidden_slow_rules.yar",
+    "date": "2026-10-22",
+    "sha256": "2132213f41d42eeab5ea302635aa07fa5a2fd7b89ef2f633c4484aa4dce17d68"
+  },
+  "r0ny123/yara-lapidary:rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar": {
+    "canonical": "r0ny123/yara-lapidary:rules/kamisara_ole_lnk_internetexplorer_idlist_suspicious.yar",
+    "date": "2026-10-22",
+    "sha256": "df347ce4ab15bcab1eb27894db33783bb3773bf7e577ae3d7396950d896c047a"
+  },
+  "r0ny123/yara-lapidary:rules/notareverser_100days_rules.yar": {
+    "canonical": "r0ny123/yara-lapidary:rules/notareverser_100days_rules.yar",
+    "date": "2026-10-22",
+    "sha256": "0fd70189a1f608dd2a6e0079ce5d544f65755566b84d750dfc9df2f5072c1305"
   },
   "r4z1xx/yara-collection:SEKOIA-IO/backdoor_win_mgbot_main.yar": {
     "canonical": "copy of sekoia-io's backdoor_win_mgbot_main.yar",
@@ -188,6 +338,16 @@
     "date": "2026-10-09",
     "indexed_as": "reversinglabs_antidebugging_stringcopyaccessviolation_1",
     "sha256": "9e62815af35d72275a9afc76719496607f814741121b6b35762e2e41e5d79e51"
+  },
+  "ryanmrestivo/blue-team:_file-analysis/generic-parser/src/rules/Packers/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "ryanmrestivo/blue-team:_file-analysis/peframe/signatures/yara_plugins/pe/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
   },
   "secpriv/adapt:yara_rules/malcat/frameworks.yar": {
     "canonical": "secpriv/adapt:yara_rules/malcat/frameworks.yar",
@@ -340,6 +500,21 @@
     "indexed_as": "sudo_amirops_webshell_php_str_replace_create_func",
     "sha256": "08841fcc36176796160850d5a208f7b56941a06c1525bafa379673773c13b002"
   },
+  "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "thevantadev/congnidroid:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara": {
+    "canonical": "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "date": "2026-10-22",
+    "sha256": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4"
+  },
+  "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
   "ununp3ntium115/custom-yara-rules:sources/detectraptor/full_windows_process.yar": {
     "canonical": null,
     "date": "2026-10-13",
@@ -350,6 +525,16 @@
     "date": "2026-10-13",
     "indexed_as": "kamisara_ole_lnk_internetexplorer_idlist_suspicious",
     "sha256": "9d74a419eeed47f140db5a5faa850cebe7960316c42b491d4ca0e8b857575a17"
+  },
+  "varnikabajpai4/ctrl_alt_elite_hack8:ember/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara": {
+    "canonical": "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "date": "2026-10-22",
+    "sha256": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4"
+  },
+  "varnikabajpai4/ctrl_alt_elite_hack8:main/Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara": {
+    "canonical": "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
+    "date": "2026-10-22",
+    "sha256": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4"
   },
   "volexity/threat-intel:2022/2022-06-15 DriftingCloud - Zero-Day Sophos Firewall Exploitation and an Insidious Breach/indicators/yara.yar": {
     "canonical": "volexity/threat-intel:2022/2022-06-15 DriftingCloud - Zero-Day Sophos Firewall Exploitation and an Insidious Breach/indicators/yara.yar",
@@ -367,5 +552,20 @@
     "canonical": null,
     "date": "2026-10-13",
     "sha256": null
+  },
+  "vulnerabivoro/filtered-yara-rules:packer_compiler_signatures.yar": {
+    "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "werwolv/imhex-patterns:yara/official_rules/packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-10-22",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
+  },
+  "x64dbg/yarasigs:packer_compiler_signatures.yara": {
+    "canonical": "x64dbg/yarasigs:packer_compiler_signatures.yara",
+    "date": "2026-10-22",
+    "sha256": "9710b940501001b66abde71937eeccd8654d77eb8419271bc0f477368b22ef86"
   }
 }
