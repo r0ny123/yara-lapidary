@@ -9,6 +9,16 @@
     "date": "2026-10-22",
     "sha256": "856a6241e38999876377406c8612a863ae9b1b35e6ee1a1c78a8cab30fd928c0"
   },
+  "100daysofyara/2023:glesnewich/SUSP_Export_Offset.yar": {
+    "canonical": "100daysofyara/2023:glesnewich/SUSP_Export_Offset.yar",
+    "date": "2026-11-10",
+    "sha256": "5bf66a7c2fa2433cde49d8b6f66e77fb70bf7e0e468a71a171ff7b89682ecf58"
+  },
+  "100daysofyara/2023:shellcromancer/elf_golf.yar": {
+    "canonical": "100daysofyara/2023:shellcromancer/elf_golf.yar",
+    "date": "2026-11-10",
+    "sha256": "43c7fe5e2f3002331a697b3e0bc5658be55516e69e27bf6e4931174397199b1d"
+  },
   "100daysofyara/2024:qutluch/Day_024.yar": {
     "canonical": "100daysofyara/2024:qutluch/Day_024.yar",
     "date": "2026-10-09",
@@ -119,16 +129,36 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "dmknght/rkcheck:rules/commons.yar": {
+    "canonical": "dmknght/rkcheck:rules/commons.yar",
+    "date": "2026-11-10",
+    "sha256": "aec8ab7356de45f446460e7f41db63f42fbaa1e1f6aefe1fee96066ffd8f555b"
+  },
+  "evild3ad/yara:evild3ad/Windows_Suspicious_Authenticode.yar": {
+    "canonical": "evild3ad/yara:evild3ad/Windows_Suspicious_Authenticode.yar",
+    "date": "2026-11-10",
+    "sha256": "a89da98a72aa7136522d74947c77d1ff5f7fe5a0b134f1a94d19ff7e71ebc222"
+  },
   "f6-dfir/ransomware:LokiLocker/LokiLocker.yar": {
     "canonical": "f6-dfir/ransomware:LokiLocker/LokiLocker.yar",
     "date": "2026-10-20",
     "indexed_as": "f6_dfir_lokilocker",
     "sha256": "35af15d9b1a8b6d6b70b19e78e89149f204bf5b1f2d6b64dc511b48d28468a8c"
   },
+  "fareedfauzi/mantis:backend/data/yara-rules/yaraify/AtlasB_Batch_Crypter.yar": {
+    "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/AtlasB_Batch_Crypter.yar",
+    "date": "2026-11-10",
+    "sha256": "288c652bd7aa30d6a38b18fdbfd178daa64c23cf633b0f3e20c89334be09ab62"
+  },
   "filescanio/fsyara-original:executable/PE-ELF/generic/mwlab-pe-anomalies.yar": {
     "canonical": "filescanio/fsyara-original:executable/PE-ELF/generic/mwlab-pe-anomalies.yar",
     "date": "2026-10-22",
     "sha256": "d0bf743d37e01800d054daa6ab421ae571946712abf16f35dfb5bf7385937a73"
+  },
+  "firdawsm/malware-analysis-sandbox:rules/malware_signatures.yar": {
+    "canonical": "firdawsm/malware-analysis-sandbox:rules/malware_signatures.yar",
+    "date": "2026-11-10",
+    "sha256": "c55d75ec81a1bfa5089a92471d967c68043241fb417cf932d4d8cb20baeac6e7"
   },
   "fox-it/dissect.cobaltstrike:scripts/obfuscated-beacon.yar": {
     "canonical": "fox-it/dissect.cobaltstrike:scripts/obfuscated-beacon.yar",
@@ -151,10 +181,90 @@
     "date": "2026-10-22",
     "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
   },
+  "githubuserka/yara-rules-memory-binary-generator-for-linux:rules.yar": {
+    "canonical": "githubuserka/yara-rules-memory-binary-generator-for-linux:rules.yar",
+    "date": "2026-11-10",
+    "sha256": "8057a01fa3d8881b66055a0151e4f38b9068722094e3ebcc6ecefb322fdeb374"
+  },
+  "gokbakare/rulesetrat:Acropolis_1_0/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Acropolis_1_0/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "1c4d939237ead12047f61af597be8927bd6aadc1f984b5960d07ad801346bd01"
+  },
+  "gokbakare/rulesetrat:All-Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:All-Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "838bf355d7e717cee13940457aa0be21c0aa42440a767149333542f05ad2609b"
+  },
+  "gokbakare/rulesetrat:Buschtrommel_1_0_TNG/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Buschtrommel_1_0_TNG/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "41531f2c2ff26ff7a48d1b69d117597a4c9c0fc18120883db1d1ea5a7a1f1ffb"
+  },
+  "gokbakare/rulesetrat:DH_Rat_0_3/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:DH_Rat_0_3/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "3809f3da7b254b2694374779374efdaaa2c3c3f7c12aac4c0fb70fdade00c7e3"
+  },
+  "gokbakare/rulesetrat:Daleth_RAT_1_0/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Daleth_RAT_1_0/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "ab535c0d77aeac20e0e4ae45a42949868c5d71069bb728deef58ee5fdb6bb661"
+  },
+  "gokbakare/rulesetrat:NetAngel_v1_0/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:NetAngel_v1_0/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "16145ca3d2bad3ba0c9560d8b24d44632f458b517f105101e63c3b0aaa18be83"
+  },
+  "gokbakare/rulesetrat:OrionRAT_0_9/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:OrionRAT_0_9/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "a00e34b91158673f886d9643e55be258b2f6f2aabfa2c9e5601036de41c3efa9"
+  },
+  "gokbakare/rulesetrat:Pandora_RAT_v1_1/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Pandora_RAT_v1_1/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "467758b9717ef69b4630e40bb8948978c727de5adfb99825d8b903f965c654dd"
+  },
+  "gokbakare/rulesetrat:TsuRat_v0_2/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:TsuRat_v0_2/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "1424dbdc9b7b24006796c7aad7aea629af51291327eb4e138a9aa40edeb3c7ae"
+  },
+  "gokbakare/rulesetrat:Z_dem0n10/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Z_dem0n10/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "9c43accaa3750727e7c0281806815d7f91f28f2bb836761ac4360ed3b12b9a7c"
+  },
+  "gokbakare/rulesetrat:Z_dem0n111/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Z_dem0n111/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "4254d972681f6d4676a186f68e8cb7287272fa4ad710a9f6ab7d3b8a2c777fe8"
+  },
+  "gokbakare/rulesetrat:Z_dem0n12/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Z_dem0n12/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "541b057d1d883ff7f379b91eba0e3b0e8edcb6e4f6ea5790805cf2d1774a8543"
+  },
+  "gokbakare/rulesetrat:Z_dem0n126/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:Z_dem0n126/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "229cb5590d3b87f51c8618bbbd01240b8c98c53730947bf7aed495ef45e2e1ab"
+  },
+  "gokbakare/rulesetrat:santi_RAT/Builder.yara": {
+    "canonical": "gokbakare/rulesetrat:santi_RAT/Builder.yara",
+    "date": "2026-11-10",
+    "sha256": "b3671eb11d9107e446bfe508f02d572b43bef1cefd964254fbfe19e95f360d81"
+  },
   "guelfoweb/peframe:peframe/signatures/yara_plugins/pe/packer_compiler_signatures.yar": {
     "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
     "date": "2026-10-22",
     "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "horsicq/detect-it-easy:yara_rules/DiE_EnhancedHeuristics_by_DosX.yar": {
+    "canonical": "horsicq/detect-it-easy:yara_rules/DiE_EnhancedHeuristics_by_DosX.yar",
+    "date": "2026-11-10",
+    "sha256": "77f933e2eee8f5cc750b6adee8da72f93f9df2bef9125d319c05e0e77157297a"
   },
   "horsicq/detect-it-easy:yara_rules/packer_compiler_signatures.yar": {
     "canonical": "horsicq/detect-it-easy:yara_rules/packer_compiler_signatures.yar",
@@ -188,11 +298,21 @@
     "date": "2026-10-22",
     "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
   },
+  "kamisara/ai-malware-sandbox:rules/yarahub.backup/AtlasB_Batch_Crypter.yar": {
+    "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/AtlasB_Batch_Crypter.yar",
+    "date": "2026-11-10",
+    "sha256": "288c652bd7aa30d6a38b18fdbfd178daa64c23cf633b0f3e20c89334be09ab62"
+  },
   "kamisara/ai-malware-sandbox:rules/yarahub.backup/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar": {
     "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
     "date": "2026-10-13",
     "indexed_as": "kamisara_ole_lnk_internetexplorer_idlist_suspicious",
     "sha256": "9d74a419eeed47f140db5a5faa850cebe7960316c42b491d4ca0e8b857575a17"
+  },
+  "kamisara/ai-malware-sandbox:rules/yarahub/AtlasB_Batch_Crypter.yar": {
+    "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/AtlasB_Batch_Crypter.yar",
+    "date": "2026-11-10",
+    "sha256": "288c652bd7aa30d6a38b18fdbfd178daa64c23cf633b0f3e20c89334be09ab62"
   },
   "kamisara/ai-malware-sandbox:rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar": {
     "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
@@ -204,6 +324,11 @@
     "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
     "date": "2026-10-22",
     "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
+  },
+  "kdivyansh/yara_scanner:rules/PCToaster.yara": {
+    "canonical": "kdivyansh/yara_scanner:rules/PCToaster.yara",
+    "date": "2026-11-10",
+    "sha256": "79e2f04a2780ccabc8c3d5f2e9942d3d9d31315420f9fde556c3181b5474a2bb"
   },
   "kirandawadi/volatility3-mcp:rules/packers/packer_compiler_signatures.yar": {
     "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
@@ -225,11 +350,31 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "m-sec-org/c-eyes:rules/yaraRules/Malicious.tools.yar": {
+    "canonical": "m-sec-org/d-eyes:yaraRules/Malicious.tools.yar",
+    "date": "2026-11-10",
+    "sha256": "2fbf845cc1d245dcee0997acdbb852c8ad94dc5d8f4e01f1a62a450e80efd284"
+  },
+  "m-sec-org/d-eyes:yaraRules/Malicious.tools.yar": {
+    "canonical": "m-sec-org/d-eyes:yaraRules/Malicious.tools.yar",
+    "date": "2026-11-10",
+    "sha256": "2fbf845cc1d245dcee0997acdbb852c8ad94dc5d8f4e01f1a62a450e80efd284"
+  },
+  "malwarology/versioninfo:yara/ruleset.yar": {
+    "canonical": "malwarology/versioninfo:yara/ruleset.yar",
+    "date": "2026-11-10",
+    "sha256": "0d6f6d93ccef9610f2b0f818fce762d33e3cdb76d7db269e1d3ae39b97dbfb90"
+  },
   "meisameb/repository-of-yara-rules:generic/sta_Voltron_0xFancyFilter.yara": {
     "canonical": "meisameb/repository-of-yara-rules:generic/sta_Voltron_0xFancyFilter.yara",
     "date": "2026-10-20",
     "rejected": "copy of juanandresgs's rule with minor edits",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
+  },
+  "mgreen27/100daysofyara:2025/SUS_PE_WeirdDebugInfoType.yar": {
+    "canonical": "mgreen27/100daysofyara:2025/SUS_PE_WeirdDebugInfoType.yar",
+    "date": "2026-11-10",
+    "sha256": "ca2e76444eba2612c149d6e091edf1875b87cc92e04904dadb1f45ead9214763"
   },
   "mgreen27/detectraptor:yara/full_windows_process.yar": {
     "canonical": null,
@@ -276,6 +421,21 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "poonia80ravi/yara_rules:windows/win.dilljuice_w0.yar": {
+    "canonical": "poonia80ravi/yara_rules:windows/win.dilljuice_w0.yar",
+    "date": "2026-11-10",
+    "sha256": "84adf366ca1690be5758a8748e35419a35fe977c3ffbf5be4cbe30c9abe13921"
+  },
+  "pwcuk-cto/thesas2021-red-kelpie:yara/ms13_098.yar": {
+    "canonical": "pwcuk-cto/thesas2021-red-kelpie:yara/ms13_098.yar",
+    "date": "2026-11-10",
+    "sha256": "6a4e33ab365474b672424b26dd4802e1c99dda6808dae98138f189444402bc11"
+  },
+  "qqbgxi/malwaredetectiontool:rules/yara/100 Days of YARA/2023-main/shellcromancer/elf_golf.yar": {
+    "canonical": "100daysofyara/2023:shellcromancer/elf_golf.yar",
+    "date": "2026-11-10",
+    "sha256": "43c7fe5e2f3002331a697b3e0bc5658be55516e69e27bf6e4931174397199b1d"
+  },
   "qqbgxi/malwaredetectiontool:rules/yara/100 Days of YARA/2024-main/qutluch/Day_024.yar": {
     "canonical": "100daysofyara/2024:qutluch/Day_024.yar",
     "date": "2026-10-09",
@@ -292,6 +452,16 @@
     "canonical": "copy of 100daysofyara's MAL_AcidBox.yar",
     "date": "2026-10-22",
     "sha256": null
+  },
+  "qqbgxi/malwaredetectiontool:rules/yara/SUSP_Export_Offset.yar": {
+    "canonical": "100daysofyara/2023:glesnewich/SUSP_Export_Offset.yar",
+    "date": "2026-11-10",
+    "sha256": "5bf66a7c2fa2433cde49d8b6f66e77fb70bf7e0e468a71a171ff7b89682ecf58"
+  },
+  "qqbgxi/malwaredetectiontool:rules/yara/elf_golf.yar": {
+    "canonical": "100daysofyara/2023:shellcromancer/elf_golf.yar",
+    "date": "2026-11-10",
+    "sha256": "43c7fe5e2f3002331a697b3e0bc5658be55516e69e27bf6e4931174397199b1d"
   },
   "r0ny123/yara-lapidary:rules/gles_100days_of_yara.yar": {
     "canonical": null,
@@ -342,6 +512,16 @@
     "date": "2026-10-09",
     "indexed_as": "reversinglabs_antidebugging_stringcopyaccessviolation_1",
     "sha256": "9e62815af35d72275a9afc76719496607f814741121b6b35762e2e41e5d79e51"
+  },
+  "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara": {
+    "canonical": "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara",
+    "date": "2026-11-10",
+    "sha256": "29b84bfe68b40e15917aea9245f336b4bff7c41d1fdef576ad656f206f10b525"
+  },
+  "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara": {
+    "canonical": "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara",
+    "date": "2026-11-10",
+    "sha256": "848935fc37d36f3a3c080e9d7b6ebc6a0e65db49ad34a847d3039c8aa4ae22af"
   },
   "ryanmrestivo/blue-team:_file-analysis/generic-parser/src/rules/Packers/packer_compiler_signatures.yar": {
     "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
@@ -524,6 +704,11 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "ununp3ntium115/custom-yara-rules:sources/yaraify-abusech/AtlasB_Batch_Crypter.yar": {
+    "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/AtlasB_Batch_Crypter.yar",
+    "date": "2026-11-10",
+    "sha256": "288c652bd7aa30d6a38b18fdbfd178daa64c23cf633b0f3e20c89334be09ab62"
+  },
   "ununp3ntium115/custom-yara-rules:sources/yaraify-abusech/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar": {
     "canonical": "kamisara/ai-malware-sandbox:rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar",
     "date": "2026-10-13",
@@ -571,5 +756,20 @@
     "canonical": "x64dbg/yarasigs:packer_compiler_signatures.yara",
     "date": "2026-10-22",
     "sha256": "9710b940501001b66abde71937eeccd8654d77eb8419271bc0f477368b22ef86"
+  },
+  "xianzheng-id/ransompyshield-model:Rule/AntiDebug.yar": {
+    "canonical": "xianzheng-id/ransompyshield-model:Rule/AntiDebug.yar",
+    "date": "2026-11-10",
+    "sha256": "a10391bc521ecef83599e225b50e5c596f680c0aad8fefc591c704a27a3e8d57"
+  },
+  "xxxxxxxxxxxj/apt-tracerag:Vector-KG/yara_rules/malcat/frameworks.yar": {
+    "canonical": "secpriv_frameworks",
+    "date": "2026-11-10",
+    "sha256": "550baf543212bf08802ec962aba6a02a7bafd61babd02158567ddc9105683d9e"
+  },
+  "yara-rules/rules:packers/packer_compiler_signatures.yar": {
+    "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
+    "date": "2026-11-10",
+    "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
   }
 }
