@@ -381,6 +381,11 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "michelcrypt4d4mus/pdfalyzer:pdfalyzer/yara_rules/PDF.yara": {
+    "canonical": "michelcrypt4d4mus/pdfalyzer:pdfalyzer/yara_rules/PDF.yara",
+    "date": "2026-10-27",
+    "sha256": "824541b66509432452a6dea2bb996111b5fc23c0cc498428f10f0e573fb45b0e"
+  },
   "mikesxrs/open-source-yara-rules:juanandresgs/sta_Voltron_0xFancyFilter.yara": {
     "canonical": "copy of juanandresgs's sta_voltron_0xfancyfilter.yara",
     "date": "2026-10-20",
@@ -405,6 +410,11 @@
     "canonical": "copy of juanandresgs's sta_voltron_0xfancyfilter.yara",
     "date": "2026-10-20",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
+  },
+  "neo23x0/panopticon:bad_rule.yar": {
+    "canonical": "neo23x0/panopticon:bad_rule.yar",
+    "date": "2026-10-27",
+    "sha256": "58c34b160105fea7f034d4fa7ee7a44ab50655f49f5efddb4222ea2f2466c9f2"
   },
   "neo23x0/signature-base:yara/apt_winnti_br.yar": {
     "canonical": "neo23x0/signature-base:yara/apt_winnti_br.yar",
@@ -655,6 +665,11 @@
     "date": "2026-10-20",
     "indexed_as": "sekoia_io_dropper_win_ninerat",
     "sha256": "dda70571524cbb0408092662870ca3c731a7f19014773209587c0ec7c2aab81c"
+  },
+  "siradankullanici/hydradragonantiviruslinux:yara/yaraxtr.yar": {
+    "canonical": "siradankullanici/hydradragonantiviruslinux:yara/yaraxtr.yar",
+    "date": "2026-10-27",
+    "sha256": "eb26ce296938730ab5c6af74a87ab387e17efd22bef4686f21366371fec68a1b"
   },
   "sudesh0sudesh/githubioc_collector:repositories/volexity_threat-intel/original_files/2024/2024-01-10 Ivanti Connect Secure/indicators/yara.yar": {
     "canonical": "copy of volexity's yara.yar",
