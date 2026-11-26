@@ -1,0 +1,644 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara",
+    "html_url": "https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara",
+    "author": "reversinglabs",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "reversinglabs/reversinglabs-siem-rules",
+    "path": "Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara",
+    "from_fork": false,
+    "content_id": "848935fc37d36f3a3c080e9d7b6ebc6a0e65db49ad34a847d3039c8aa4ae22af",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 18,
+    "density": 18.0,
+    "signals": {
+      "match-offset-arithmetic": 4,
+      "match-length": 2,
+      "module-iterator": 1,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara",
+    "html_url": "https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara",
+    "author": "reversinglabs",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "reversinglabs/reversinglabs-siem-rules",
+    "path": "Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara",
+    "from_fork": false,
+    "content_id": "29b84bfe68b40e15917aea9245f336b4bff7c41d1fdef576ad656f206f10b525",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 18,
+    "density": 18.0,
+    "signals": {
+      "match-offset-arithmetic": 4,
+      "match-length": 2,
+      "module-iterator": 1,
+      "pe-structure": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/PwCUK-CTO/TheSAS2021-Red-Kelpie/0dfe9d22b7c24d829d08deac751a6fb1569ca0ed/yara/ms13_098.yar",
+    "html_url": "https://github.com/PwCUK-CTO/TheSAS2021-Red-Kelpie/blob/0dfe9d22b7c24d829d08deac751a6fb1569ca0ed/yara/ms13_098.yar",
+    "author": "PwCUK-CTO",
+    "license": "Apache-2.0",
+    "origin_note": "",
+    "repo": "PwCUK-CTO/TheSAS2021-Red-Kelpie",
+    "path": "yara/ms13_098.yar",
+    "from_fork": false,
+    "content_id": "6a4e33ab365474b672424b26dd4802e1c99dda6808dae98138f189444402bc11",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 20,
+    "density": 10.0,
+    "signals": {
+      "match-offset-arithmetic": 8,
+      "module-iterator": 2,
+      "entropy-range": 2,
+      "pe-structure": 14
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field",
+      "duplicate_import",
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 2,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/150f1ac6b437bb0fd4177193a6edfa9272823ec8/santi_RAT/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/150f1ac6b437bb0fd4177193a6edfa9272823ec8/santi_RAT/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "santi_RAT/Builder.yara",
+    "from_fork": false,
+    "content_id": "b3671eb11d9107e446bfe508f02d572b43bef1cefd964254fbfe19e95f360d81",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 10,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/dde7d2a067be4ff650adfc85c4ecedddda8a633f/Z_dem0n12/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/dde7d2a067be4ff650adfc85c4ecedddda8a633f/Z_dem0n12/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Z_dem0n12/Builder.yara",
+    "from_fork": false,
+    "content_id": "541b057d1d883ff7f379b91eba0e3b0e8edcb6e4f6ea5790805cf2d1774a8543",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 8,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/fcb10415c3659590fc924c40a0c2fcd97491c6f0/Z_dem0n10/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/fcb10415c3659590fc924c40a0c2fcd97491c6f0/Z_dem0n10/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Z_dem0n10/Builder.yara",
+    "from_fork": false,
+    "content_id": "9c43accaa3750727e7c0281806815d7f91f28f2bb836761ac4360ed3b12b9a7c",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 8,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/870fecc393c0ae1a8339cc2b99f8847f1d4994d5/TsuRat_v0_2/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/870fecc393c0ae1a8339cc2b99f8847f1d4994d5/TsuRat_v0_2/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "TsuRat_v0_2/Builder.yara",
+    "from_fork": false,
+    "content_id": "1424dbdc9b7b24006796c7aad7aea629af51291327eb4e138a9aa40edeb3c7ae",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 9,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/75a76af45f515205fedbe8d5e703ceea42c690f8/Z_dem0n126/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/75a76af45f515205fedbe8d5e703ceea42c690f8/Z_dem0n126/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Z_dem0n126/Builder.yara",
+    "from_fork": false,
+    "content_id": "229cb5590d3b87f51c8618bbbd01240b8c98c53730947bf7aed495ef45e2e1ab",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 8,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/39780a15c2f779d9c44c9e5541cbedf7e8068ecc/Z_dem0n111/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/39780a15c2f779d9c44c9e5541cbedf7e8068ecc/Z_dem0n111/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Z_dem0n111/Builder.yara",
+    "from_fork": false,
+    "content_id": "4254d972681f6d4676a186f68e8cb7287272fa4ad710a9f6ab7d3b8a2c777fe8",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 8,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/6fd2757abe8d77ebd22e5c9b417424a409ba79c1/NetAngel_v1_0/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/6fd2757abe8d77ebd22e5c9b417424a409ba79c1/NetAngel_v1_0/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "NetAngel_v1_0/Builder.yara",
+    "from_fork": false,
+    "content_id": "16145ca3d2bad3ba0c9560d8b24d44632f458b517f105101e63c3b0aaa18be83",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 8,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/4d78c8efbf5f9904b0cc36ffec4f34bb133beb9a/DH_Rat_0_3/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/4d78c8efbf5f9904b0cc36ffec4f34bb133beb9a/DH_Rat_0_3/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "DH_Rat_0_3/Builder.yara",
+    "from_fork": false,
+    "content_id": "3809f3da7b254b2694374779374efdaaa2c3c3f7c12aac4c0fb70fdade00c7e3",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 14,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/85e3f52c63c219684f5b720080ee31f2f24f63a3/Acropolis_1_0/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/85e3f52c63c219684f5b720080ee31f2f24f63a3/Acropolis_1_0/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Acropolis_1_0/Builder.yara",
+    "from_fork": false,
+    "content_id": "1c4d939237ead12047f61af597be8927bd6aadc1f984b5960d07ad801346bd01",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 7,
+      "at-computed-offset": 1
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/39e47bba6c4695a6c796c31a228ffa0b741c0c90/OrionRAT_0_9/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/39e47bba6c4695a6c796c31a228ffa0b741c0c90/OrionRAT_0_9/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "OrionRAT_0_9/Builder.yara",
+    "from_fork": false,
+    "content_id": "a00e34b91158673f886d9643e55be258b2f6f2aabfa2c9e5601036de41c3efa9",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 10,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/b9e48c7771926b76ad9f10bcf28a3bb5a93b5f65/Daleth_RAT_1_0/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/b9e48c7771926b76ad9f10bcf28a3bb5a93b5f65/Daleth_RAT_1_0/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Daleth_RAT_1_0/Builder.yara",
+    "from_fork": false,
+    "content_id": "ab535c0d77aeac20e0e4ae45a42949868c5d71069bb728deef58ee5fdb6bb661",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 10,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/5db887d9872ff69ff0afaf00fa8b1d2764a676b7/Pandora_RAT_v1_1/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/5db887d9872ff69ff0afaf00fa8b1d2764a676b7/Pandora_RAT_v1_1/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Pandora_RAT_v1_1/Builder.yara",
+    "from_fork": false,
+    "content_id": "467758b9717ef69b4630e40bb8948978c727de5adfb99825d8b903f965c654dd",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 10,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/GokbakarE/RuleSetRAT/d84b4fac911149e67cd3a1a872c884288442df5a/Buschtrommel_1_0_TNG/Builder.yara",
+    "html_url": "https://github.com/GokbakarE/RuleSetRAT/blob/d84b4fac911149e67cd3a1a872c884288442df5a/Buschtrommel_1_0_TNG/Builder.yara",
+    "author": "GokbakarE",
+    "license": "AGPL-3.0",
+    "origin_note": "",
+    "repo": "GokbakarE/RuleSetRAT",
+    "path": "Buschtrommel_1_0_TNG/Builder.yara",
+    "from_fork": false,
+    "content_id": "41531f2c2ff26ff7a48d1b69d117597a4c9c0fc18120883db1d1ea5a7a1f1ffb",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "pe-structure": 12,
+      "at-computed-offset": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "non_bool_expr"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"data_directories[\" \"virtual_address\" \"filesize\"",
+      "\"math.entropy(\" \"@\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/mgreen27/100daysofyara/9f414075d50016348e2c510ee2209300a9752487/2025/SUS_PE_WeirdDebugInfoType.yar",
+    "html_url": "https://github.com/mgreen27/100daysofyara/blob/9f414075d50016348e2c510ee2209300a9752487/2025/SUS_PE_WeirdDebugInfoType.yar",
+    "author": "mgreen27",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "mgreen27/100daysofyara",
+    "path": "2025/SUS_PE_WeirdDebugInfoType.yar",
+    "from_fork": false,
+    "content_id": "ca2e76444eba2612c149d6e091edf1875b87cc92e04904dadb1f45ead9214763",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 5.0,
+    "signals": {
+      "header-arithmetic": 1,
+      "pe-structure": 10
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/100DaysofYARA/2023/5b630f980191cc4d06a96895734cd54815dd0877/glesnewich/SUSP_Export_Offset.yar",
+    "html_url": "https://github.com/100DaysofYARA/2023/blob/5b630f980191cc4d06a96895734cd54815dd0877/glesnewich/SUSP_Export_Offset.yar",
+    "author": "100DaysofYARA",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "100DaysofYARA/2023",
+    "path": "glesnewich/SUSP_Export_Offset.yar",
+    "from_fork": false,
+    "content_id": "5bf66a7c2fa2433cde49d8b6f66e77fb70bf7e0e468a71a171ff7b89682ecf58",
+    "copies": [
+      "qqbgxi/malwaredetectiontool:rules/yara/SUSP_Export_Offset.yar"
+    ],
+    "origin_reason": "earliest first commit (2023-01-14)",
+    "score": 9,
+    "density": 4.5,
+    "signals": {
+      "module-iterator": 2,
+      "defined": 6,
+      "pe-structure": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 2,
+    "queries": [
+      "\"not defined\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/poonia80ravi/Yara_Rules/ee330c25b1185e71476b192ac80b4dd2e11d25b5/windows/win.dilljuice_w0.yar",
+    "html_url": "https://github.com/poonia80ravi/Yara_Rules/blob/ee330c25b1185e71476b192ac80b4dd2e11d25b5/windows/win.dilljuice_w0.yar",
+    "author": "poonia80ravi",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "poonia80ravi/Yara_Rules",
+    "path": "windows/win.dilljuice_w0.yar",
+    "from_fork": false,
+    "content_id": "84adf366ca1690be5758a8748e35419a35fe977c3ffbf5be4cbe30c9abe13921",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 4,
+    "density": 4.0,
+    "signals": {
+      "header-arithmetic": 1,
+      "pe-structure": 2
+    },
+    "status": "pass",
+    "diagnostics": [],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/evild3ad/yara/343258ef1cc155c060c4505c220f0e6fc9614300/evild3ad/Windows_Suspicious_Authenticode.yar",
+    "html_url": "https://github.com/evild3ad/yara/blob/343258ef1cc155c060c4505c220f0e6fc9614300/evild3ad/Windows_Suspicious_Authenticode.yar",
+    "author": "evild3ad",
+    "license": "GPL-3.0",
+    "origin_note": "",
+    "repo": "evild3ad/yara",
+    "path": "evild3ad/Windows_Suspicious_Authenticode.yar",
+    "from_fork": false,
+    "content_id": "a89da98a72aa7136522d74947c77d1ff5f7fe5a0b134f1a94d19ff7e71ebc222",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 5,
+    "density": 2.5,
+    "signals": {
+      "module-iterator": 2,
+      "defined": 1
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field"
+    ],
+    "min_atom": null,
+    "rules": 2,
+    "queries": [
+      "\"not defined\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/malwarology/versioninfo/d1b0e5aaec77a0844684c6d82d1e4e78f86c5683/yara/ruleset.yar",
+    "html_url": "https://github.com/malwarology/versioninfo/blob/d1b0e5aaec77a0844684c6d82d1e4e78f86c5683/yara/ruleset.yar",
+    "author": "malwarology",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "malwarology/versioninfo",
+    "path": "yara/ruleset.yar",
+    "from_fork": false,
+    "content_id": "0d6f6d93ccef9610f2b0f818fce762d33e3cdb76d7db269e1d3ae39b97dbfb90",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 12,
+    "density": 2.4,
+    "signals": {
+      "match-offset-arithmetic": 1,
+      "module-iterator": 2,
+      "header-arithmetic": 1,
+      "pe-structure": 21
+    },
+    "status": "warn",
+    "diagnostics": [
+      "deprecated_field",
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 5,
+    "queries": [
+      "\"rva_to_offset(\" \"uint32(\""
+    ]
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/dmknght/rkcheck/8ee50f3ae9b5ba153fd1ec41fa4f448fef7bf633/rules/commons.yar",
+    "html_url": "https://github.com/dmknght/rkcheck/blob/8ee50f3ae9b5ba153fd1ec41fa4f448fef7bf633/rules/commons.yar",
+    "author": "dmknght",
+    "license": "unspecified",
+    "origin_note": "",
+    "repo": "dmknght/rkcheck",
+    "path": "rules/commons.yar",
+    "from_fork": false,
+    "content_id": "aec8ab7356de45f446460e7f41db63f42fbaa1e1f6aefe1fee96066ffd8f555b",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 12,
+    "density": 1.1,
+    "signals": {
+      "module-iterator": 4,
+      "defined": 10,
+      "non-pe-module": 77
+    },
+    "status": "fail",
+    "diagnostics": [
+      "E009",
+      "E043",
+      "text_as_hex"
+    ],
+    "min_atom": null,
+    "rules": 11,
+    "queries": [
+      "\"not defined\""
+    ]
+  }
+]
