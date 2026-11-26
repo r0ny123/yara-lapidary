@@ -15,6 +15,11 @@ from common import RE_GIST, RE_RAW, ROOT, SHA40, NotOriginal, all_rules, api, co
 LEVEL = {"pass": 0, "warn": 1, "fail": 2}
 
 
+def unix(text):
+    """Line endings differ between hosts (pastebin serves CRLF); compare text only."""
+    return text.replace("\r\n", "\n")
+
+
 def origin_problems(meta):
     url = meta.get("Pinned", "")
     m, g = RE_RAW.match(url), RE_GIST.match(url)
@@ -46,7 +51,7 @@ def main():
         if a.upstream:
             mine += origin_problems(meta)
             try:
-                if fetch_body(meta) != body:
+                if unix(fetch_body(meta)) != unix(body):
                     mine.append("differs from the pinned source")
             except Exception as e:
                 mine.append(f"fetch failed ({e})")
