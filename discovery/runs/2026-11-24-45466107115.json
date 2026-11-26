@@ -1,0 +1,29 @@
+[
+  {
+    "source_url": "https://raw.githubusercontent.com/cgfixit/yara-gate/fa5df3c4fa969b762bb4f1d7de4ad1fc00a1901d/rules/local/agent_prompt_injection_phrases.yar",
+    "html_url": "https://github.com/cgfixit/yara-gate/blob/fa5df3c4fa969b762bb4f1d7de4ad1fc00a1901d/rules/local/agent_prompt_injection_phrases.yar",
+    "author": "cgfixit",
+    "license": "MIT",
+    "origin_note": "",
+    "repo": "cgfixit/yara-gate",
+    "path": "rules/local/agent_prompt_injection_phrases.yar",
+    "from_fork": false,
+    "content_id": "4930e033ad2b30b8a508949d764662613025fed73df56f42cc44afc46456ecfe",
+    "copies": [],
+    "origin_reason": "only copy",
+    "score": 9,
+    "density": 9.0,
+    "signals": {
+      "match-offset-arithmetic": 11
+    },
+    "status": "warn",
+    "diagnostics": [
+      "potentially_slow_loop"
+    ],
+    "min_atom": null,
+    "rules": 1,
+    "queries": [
+      "\"for any of\" \"uint8(@\""
+    ]
+  }
+]
