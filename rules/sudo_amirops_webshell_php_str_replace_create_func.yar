@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar
-// Pinned:   https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar
-// Author:   sudo-amirops
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/sudo-amirops/YARA-SIGMA-Rules-Collection/blob/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar
+// Pinned: https://raw.githubusercontent.com/sudo-amirops/YARA-SIGMA-Rules-Collection/460091196d632f58c7ef4a9573dbea4e6dcbd0bd/yara/webshells/webshell_php_str_replace_create_func.yar
+// Author: sudo-amirops
+// License: unspecified
+// Fetched: 2026-10-22
+// Techniques: capped-loop, match-offset-arithmetic
+// Expect: pass
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 /*
  * ---------------------------------------------------------------

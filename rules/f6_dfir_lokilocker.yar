@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/f6-dfir/Ransomware/blob/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
-// Pinned:   https://raw.githubusercontent.com/f6-dfir/Ransomware/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
-// Author:   f6-dfir
-// License:  Apache-2.0 (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/f6-dfir/Ransomware/blob/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
+// Pinned: https://raw.githubusercontent.com/f6-dfir/Ransomware/16705671faba3f83522cc06f97edb858af1a3f5f/LokiLocker/LokiLocker.yar
+// Author: f6-dfir
+// License: Apache-2.0
+// Fetched: 2026-10-22
+// Techniques: header-arithmetic, pe-structure
+// Expect: pass
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 /*
 LokiLocker/BlackBit ransomware

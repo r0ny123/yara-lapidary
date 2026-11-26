@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/100DaysofYARA/2024/blob/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar
-// Pinned:   https://raw.githubusercontent.com/100DaysofYARA/2024/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar
-// Author:   100DaysofYARA
-// License:  MIT (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/100DaysofYARA/2024/blob/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar
+// Pinned: https://raw.githubusercontent.com/100DaysofYARA/2024/504f953ce025b5b649d5ee8bc50c1d16972de486/qutluch/Day_024.yar
+// Author: 100DaysofYARA
+// License: MIT
+// Fetched: 2026-10-22
+// Techniques: header-arithmetic, pe-structure
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: earliest first commit (2024-01-31).
+//   Review the technique tags. Same filename also under qqbgxi/MalwareDetectionTool; content
+//   differs, verify which is the author's.
 
 import "pe"
 

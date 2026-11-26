@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://pastebin.com/tEL8PZdn
-// Pinned:   https://pastebin.com/raw/tEL8PZdn
-// Author:   unknown (BrightConstellation set)
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://pastebin.com/tEL8PZdn
+// Pinned: https://pastebin.com/raw/tEL8PZdn
+// Author: unknown (BrightConstellation set)
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: content-hash-range, export-anomaly, rich-header, resource-geometry, nested-loop, variant-set
+// Expect: warn
+// Notes: Export-prologue call-target hashing (int32(i+1)+i+5), section and data-directory hashes,
+//   auto-generated $fcn_ strings with disassembly blocks. Deprecated number_of_resources and
+//   duplicate_pattern_value warnings. Pastebin paste, no upstream to resolve; author unknown.
 
 import "pe"
 import "hash"

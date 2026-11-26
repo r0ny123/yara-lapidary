@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/g-les/100DaysofYARA/blob/a6da6991f8fe42b36c7e3a2e6f2e76f8f259126e/100_days_of_yara.yar
-// Pinned:   https://raw.githubusercontent.com/g-les/100DaysofYARA/a6da6991f8fe42b36c7e3a2e6f2e76f8f259126e/100_days_of_yara.yar
-// Author:   Greg Lesnewich
-// License:  see repository (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/g-les/100DaysofYARA/blob/a6da6991f8fe42b36c7e3a2e6f2e76f8f259126e/100_days_of_yara.yar
+// Pinned: https://raw.githubusercontent.com/g-les/100DaysofYARA/a6da6991f8fe42b36c7e3a2e6f2e76f8f259126e/100_days_of_yara.yar
+// Author: Greg Lesnewich
+// License: see repository
+// Fetched: 2026-10-21
+// Techniques: known-plaintext, content-hash-range, export-anomaly, resource-geometry, overlay, module-iterator, console-mining, string-encoding-battery, dotnet, elf
+// Expect: warn
+// Notes: 315 rules; over half pure structure. Rolling-XOR brute force, export first bytes, resource
+//   and overlay anomalies, logger rules. Deprecated number_of_* fields and non_bool_expr under
+//   YARA-X.
 
 /*
 Goals for #100DaysofYARA:

@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/SecPriv/adapt/blob/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar
-// Pinned:   https://raw.githubusercontent.com/SecPriv/adapt/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar
-// Author:   SecPriv
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/SecPriv/adapt/blob/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar
+// Pinned: https://raw.githubusercontent.com/SecPriv/adapt/c91b6eb185e6e17ff4d8f223b593778001c233c9/yara_rules/malcat/frameworks.yar
+// Author: SecPriv
+// License: unspecified
+// Fetched: 2026-10-22
+// Techniques: at-computed-offset, match-length, non-pe-module, pe-structure
+// Expect: fail
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "pe"
 import "dotnet"

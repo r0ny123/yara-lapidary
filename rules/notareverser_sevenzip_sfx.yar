@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e
-// Pinned:   https://gist.githubusercontent.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e/raw/eb54cf4b7f12bb42ded0519ca8fe4065310b3476/sevenzip_sfx.yara
-// Author:   notareverser
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e
+// Pinned: https://gist.githubusercontent.com/notareverser/f1b0c4b871459af2adfe1d1e44c8fa1e/raw/eb54cf4b7f12bb42ded0519ca8fe4065310b3476/sevenzip_sfx.yara
+// Author: notareverser
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: variant-set
+// Expect: pass
+// Notes: Eight compiler variants of one routine plus a wide string anchor; 1 of ($fn*) and
+//   $command.
 
 rule Windows_7z_SFX
 {

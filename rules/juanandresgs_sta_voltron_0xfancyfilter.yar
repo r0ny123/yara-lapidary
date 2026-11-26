@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/juanandresgs/YARA/blob/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara
-// Pinned:   https://raw.githubusercontent.com/juanandresgs/YARA/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara
-// Author:   juanandresgs
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/juanandresgs/YARA/blob/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara
+// Pinned: https://raw.githubusercontent.com/juanandresgs/YARA/98e3257d4d39734fec0309bd4eb04e6ba0105f27/sta_Voltron_0xFancyFilter.yara
+// Author: juanandresgs
+// License: unspecified
+// Fetched: 2026-10-22
+// Techniques: content-hash-range, pe-structure
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
+//   Same filename also under MeisamEb/Repository-of-yara-rules, MyMel2001/Sneed-Reactivity,
+//   mikesxrs/Open-Source-YARA-rules; content differs, verify which is the author's.
 
 import "pe"
 import "hash"

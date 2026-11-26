@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/SEKOIA-IO/Community/blob/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar
-// Pinned:   https://raw.githubusercontent.com/SEKOIA-IO/Community/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar
-// Author:   SEKOIA-IO
-// License:  NOASSERTION (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/SEKOIA-IO/Community/blob/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar
+// Pinned: https://raw.githubusercontent.com/SEKOIA-IO/Community/cb7fabee9322ae58340bbf44f1150c50d500cad7/IOCs/Interlock/interlock.yar
+// Author: SEKOIA-IO
+// License: NOASSERTION
+// Fetched: 2026-10-22
+// Techniques: content-hash-range
+// Expect: fail
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 rule backdoor_win_interlock_powershell_backdoor {
 	meta:

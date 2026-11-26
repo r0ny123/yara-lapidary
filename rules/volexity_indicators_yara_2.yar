@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/volexity/threat-intel/blob/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar
-// Pinned:   https://raw.githubusercontent.com/volexity/threat-intel/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar
-// Author:   volexity
-// License:  NOASSERTION (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/volexity/threat-intel/blob/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar
+// Pinned: https://raw.githubusercontent.com/volexity/threat-intel/1ef34c2e4704d1e6e6768c2d6800863bbae05a0d/2024/2024-01-10%20Ivanti%20Connect%20Secure/indicators/yara.yar
+// Author: volexity
+// License: NOASSERTION
+// Fetched: 2026-10-22
+// Techniques: capped-loop, match-offset-arithmetic, pattern-in-window
+// Expect: pass
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
+//   Same filename also under sudesh0sudesh/GithubIOC_Collector; content differs, verify which
+//   is the author's.
 
 import "math"
 

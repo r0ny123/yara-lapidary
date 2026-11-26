@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f
-// Pinned:   https://gist.githubusercontent.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f/raw/5e31cfedec937e6ab85ac52b3ef228f376d6a298/innosetup.yara
-// Author:   notareverser
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f
+// Pinned: https://gist.githubusercontent.com/notareverser/d892bc31423ad8ff8b68b9c78ec0ae6f/raw/5e31cfedec937e6ab85ac52b3ef228f376d6a298/innosetup.yara
+// Author: notareverser
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: variant-set, hex-alternatives
+// Expect: pass
+// Notes: Masked Delphi code joined to the literal string header (refcount, length, text) that
+//   follows it.
 
 rule InnoSetup
 {

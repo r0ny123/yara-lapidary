@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/volexity/threat-intel/blob/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar
-// Pinned:   https://raw.githubusercontent.com/volexity/threat-intel/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar
-// Author:   volexity
-// License:  NOASSERTION (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/volexity/threat-intel/blob/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar
+// Pinned: https://raw.githubusercontent.com/volexity/threat-intel/809e5e28363540d57393bd4362af89066b1f2fbf/2022/2022-06-15%20DriftingCloud%20-%20Zero-Day%20Sophos%20Firewall%20Exploitation%20and%20an%20Insidious%20Breach/indicators/yara.yar
+// Author: volexity
+// License: NOASSERTION
+// Fetched: 2026-10-22
+// Techniques: capped-loop, match-offset-arithmetic, pattern-in-window
+// Expect: fail
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
+//   Same filename also under sudesh0sudesh/GithubIOC_Collector; content differs, verify which
+//   is the author's.
 
 rule webshell_java_behinder_shellservice
 {

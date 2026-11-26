@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be
-// Pinned:   https://gist.githubusercontent.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be/raw/b7cf5e76627efd7225f64bbc67602525600c1921/nozomi_upx.yara
-// Author:   notareverser
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be
+// Pinned: https://gist.githubusercontent.com/notareverser/6c9b3f8cff0730bd0b9d19bacce4d5be/raw/b7cf5e76627efd7225f64bbc67602525600c1921/nozomi_upx.yara
+// Author: notareverser
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: variant-set, hex-alternatives
+// Expect: pass
+// Notes: UPX decompressor stubs per architecture (x86, x64, MIPS be/le, ARM, PPC) with branch
+//   displacements masked.
 
 // https://github.com/NozomiNetworks/upx-recovery-tool
 rule UPX_nozomi_x86

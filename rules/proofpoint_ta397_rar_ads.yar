@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/EmergingThreats/threatresearch/blob/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar
-// Pinned:   https://raw.githubusercontent.com/EmergingThreats/threatresearch/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar
-// Author:   Proofpoint Threat Research
-// License:  see repository (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/EmergingThreats/threatresearch/blob/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar
+// Pinned: https://raw.githubusercontent.com/EmergingThreats/threatresearch/6fcbb5eac9a2ffabd68e05b5ee3270a239c71357/yara/ta397.yar
+// Author: Proofpoint Threat Research
+// License: see repository
+// Fetched: 2026-10-21
+// Techniques: negative-window, structure-parser, hex-alternatives
+// Expect: warn
+// Notes: RAR5 service-header walk with jumps for variable fields and a bounded negative string;
+//   wmRAT code strings with per-line mnemonic comments. Warns text_as_hex.
 
 rule APT_IN_TA397_wmRAT
 {

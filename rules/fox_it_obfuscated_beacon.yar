@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/fox-it/dissect.cobaltstrike/blob/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar
-// Pinned:   https://raw.githubusercontent.com/fox-it/dissect.cobaltstrike/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar
-// Author:   fox-it
-// License:  MIT (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/fox-it/dissect.cobaltstrike/blob/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar
+// Pinned: https://raw.githubusercontent.com/fox-it/dissect.cobaltstrike/fb1a38e779d2e4fd68c3d9b4a8d001c704e992bc/scripts/obfuscated-beacon.yar
+// Author: fox-it
+// License: MIT
+// Fetched: 2026-10-22
+// Techniques: capped-loop, match-offset-arithmetic, read-arithmetic
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "console"
 import "math"

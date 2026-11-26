@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a
-// Pinned:   https://gist.githubusercontent.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a/raw/08366abaadcaba290f694ec1bfdf925d5747a59a/regin_vfs.yar
-// Author:   1nt2e
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a
+// Pinned: https://gist.githubusercontent.com/1nt2e/7fdcf7dee7e9948958b488d8a1e6e92a/raw/08366abaadcaba290f694ec1bfdf925d5747a59a/regin_vfs.yar
+// Author: 1nt2e
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: structure-parser, file-derived-bound, entropy-range, header-arithmetic, integrity-arithmetic
+// Expect: pass
+// Notes: Walks an undocumented VFS with chained reads, a quantifier that is itself a header field,
+//   and entropy on computed spans.
 
 import "math"
 
