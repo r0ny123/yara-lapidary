@@ -31,22 +31,12 @@ jobs:
 
       - uses: ./.github/actions/install-yara-x
 
-      - name: Verify entries point at upstream repositories, pinned
-        env:
-          # A user token (DISCOVERY_TOKEN) can read gists; the Actions token cannot, and the
-          # anonymous fallback shares the runner's exhausted quota. Unverifiable entries warn.
-          GH_TOKEN: ${{ secrets.DISCOVERY_TOKEN || github.token }}
-        run: python3 scripts/origin.py verify
-
-      - name: Fetch indexed sources
-        run: python3 scripts/fetch.py
-
-      - name: Vendored copies match their pinned sources
-        run: python3 scripts/snapshot.py --check
-
       - name: Check with YARA-X
         id: check
-        run: python3 scripts/check.py
+        env:
+          # A user token (DISCOVERY_TOKEN) can read gists; the Actions token cannot.
+          GH_TOKEN: ${{ secrets.DISCOVERY_TOKEN || github.token }}
+        run: python3 scripts/check.py --upstream
         continue-on-error: true
 
       - name: Publish report

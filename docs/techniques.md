@@ -1,6 +1,6 @@
 # Technique vocabulary
 
-Use these tags in `index/*.json`. Add a tag here before using it.
+Use these tags in the `Techniques:` header of `rules/*.yar`. Add a tag here before using it.
 
 | Tag | Meaning |
 |---|---|

@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/notareverser/b14667284046f7fdcf8dd84e48add1bd
-// Pinned:   https://gist.githubusercontent.com/notareverser/b14667284046f7fdcf8dd84e48add1bd/raw/ac5bda427bf3cb25b1d262824f28da4f74e58ff3/zlib.yara
-// Author:   notareverser
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/notareverser/b14667284046f7fdcf8dd84e48add1bd
+// Pinned: https://gist.githubusercontent.com/notareverser/b14667284046f7fdcf8dd84e48add1bd/raw/ac5bda427bf3cb25b1d262824f28da4f74e58ff3/zlib.yara
+// Author: notareverser
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: structure-parser
+// Expect: pass
+// Notes: Library detection by its fixed Huffman tables: long literal data, no wildcards,
+//   architecture independent.
 
 rule zlib
 {

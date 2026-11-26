@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/chainguard-dev/malcontent/blob/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara
-// Pinned:   https://raw.githubusercontent.com/chainguard-dev/malcontent/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara
-// Author:   chainguard-dev
-// License:  Apache-2.0 (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/chainguard-dev/malcontent/blob/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara
+// Pinned: https://raw.githubusercontent.com/chainguard-dev/malcontent/d0f302f4c86c367149bd3b56ac4d393c206dd221/rules/sus/exclamation.yara
+// Author: chainguard-dev
+// License: Apache-2.0
+// Fetched: 2026-10-22
+// Techniques: capped-loop, match-length, match-offset-arithmetic
+// Expect: pass
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "math"
 

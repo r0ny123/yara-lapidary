@@ -10,8 +10,8 @@ construct is and the web UI to read the hits.
 
 Forks: code search includes files from forked repositories "if they meet
 certain criteria", and a fork may be modified or stale. Add `NOT is:fork` to
-every query, and when a hit is in a fork anyway, resolve it to the upstream
-with `scripts/origin.py resolve <url>` before indexing it.
+every query, and when a hit is in a fork anyway, add the file from the
+original repository instead (`scripts/discover.py --add` refuses forks).
 
 Noise exclusions for every query:
 `NOT is:fork NOT maldoc NOT generic_anomalies NOT repo:Neo23x0/signature-base NOT repo:Yara-Rules/rules NOT path:test NOT path:tests`

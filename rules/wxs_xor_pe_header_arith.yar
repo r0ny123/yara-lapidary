@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83
-// Pinned:   https://gist.githubusercontent.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83/raw/29d1aa224b224f9be8b2ea8b0c1b8334d8f11b2f/rules.md
-// Author:   wxs
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83
+// Pinned: https://gist.githubusercontent.com/wxsBSD/bf7b88b27e9f879016b5ce2c778d3e83/raw/29d1aa224b224f9be8b2ea8b0c1b8334d8f11b2f/rules.md
+// Author: wxs
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: known-plaintext, header-arithmetic, at-computed-offset
+// Expect: pass
+// Format: markdown-fenced
+// Notes: Recovers 1-, 2- and 4-byte XOR keys and an incrementing key from the MZ/PE header; one
+//   variant feeds a string hit's key into $b at <expr>.
 
 rule single_byte_xor_pe_and_mz {
   meta:

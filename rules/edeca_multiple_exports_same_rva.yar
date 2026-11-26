@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38
-// Pinned:   https://gist.githubusercontent.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38/raw/72f8851dc474cffad941f1fd1dd1385f09e64851/dll_multiple_exports_same_rva_patch.yar
-// Author:   edeca
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38
+// Pinned: https://gist.githubusercontent.com/edeca/e8f05c457439a4f13e85f4b2dc68aa38/raw/72f8851dc474cffad941f1fd1dd1385f09e64851/dll_multiple_exports_same_rva_patch.yar
+// Author: edeca
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: pairwise-duplicate, capped-loop, export-anomaly, nested-loop
+// Expect: warn
+// Notes: Nested i / i+1 loops over export_details capped with math.min(256, n); non_bool_expr
+//   warning on a bitmask test under YARA-X.
 
 // This rule uses a feature of Yara from a proposed new feature, see:
 // https://github.com/wxsBSD/yara/tree/export_addresses

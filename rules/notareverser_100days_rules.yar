@@ -1,9 +1,13 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://gist.github.com/notareverser/d5f4f0d09285edca3ec027534c233271
-// Pinned:   https://gist.githubusercontent.com/notareverser/d5f4f0d09285edca3ec027534c233271/raw/db140e7498b250f94ff6feca365704ab21b5ff37/YARA%20rules%20for%20%23100DaysOfYARA
-// Author:   notareverser
-// License:  unspecified (as declared by the source; see it for terms)
-// Fetched:  2026-10-21
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://gist.github.com/notareverser/d5f4f0d09285edca3ec027534c233271
+// Pinned: https://gist.githubusercontent.com/notareverser/d5f4f0d09285edca3ec027534c233271/raw/db140e7498b250f94ff6feca365704ab21b5ff37/YARA%20rules%20for%20%23100DaysOfYARA
+// Author: notareverser
+// License: unspecified
+// Fetched: 2026-10-21
+// Techniques: anonymous-match-vars, match-length, api-argument, at-computed-offset, overlay, hex-alternatives
+// Expect: warn
+// Notes: CallOverString (@ and ! in for-of), API-argument rules with three call forms, VB
+//   entry-point relationship, trailer anchors. Warns potentially_slow_loop and text_as_hex.
 
 import "pe"
 

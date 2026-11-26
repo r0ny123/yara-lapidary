@@ -35,7 +35,7 @@ jobs:
 
       - uses: ./.github/actions/install-yara-x
 
-      - name: Search, resolve, compile and score
+      - name: Search and store new rules
         env:
           # Code search needs a user token; the Actions token may be refused.
           # Store a fine-grained PAT with public-repository read as DISCOVERY_TOKEN.
@@ -45,40 +45,23 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$MAX_QUERIES" =~ ^[0-9]+$ && "$MAX_CANDIDATES" =~ ^[0-9]+$ ]]
-          python3 scripts/discover.py --max-queries "$MAX_QUERIES" --max-candidates "$MAX_CANDIDATES" --out report
+          python3 scripts/discover.py --max-queries "$MAX_QUERIES" --max-candidates "$MAX_CANDIDATES"
+          cat report/summary.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Publish summary
-        run: cat report/candidates.md >> "$GITHUB_STEP_SUMMARY"
-
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
-        with:
-          name: candidates
-          path: report/candidates.*
-          retention-days: 90
-
-      - name: Open a pull request with the candidates
+      - name: Open a pull request with the new rules
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          n=$(python3 -c "import json;print(len(json.load(open('report/candidates.json'))))")
-          if [ "$n" = "0" ]; then echo "no candidates this run; not opening a pull request"; exit 0; fi
+          git add rules/ discovery/seen.txt
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           day=$(date -u +%F)
-          mkdir -p discovery/runs
-          stamp="${day}-${GITHUB_RUN_ID}"
-          cp report/candidates.md "discovery/runs/${stamp}.md"
-          cp report/candidates.json "discovery/runs/${stamp}.json"
+          branch="discovery/${day}-${GITHUB_RUN_ID}"
+          title="New rules ${day} ($(git diff --cached --name-only -- rules/ | wc -l))"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          branch="discovery/${day}-${GITHUB_RUN_ID}"   # unique per run; several runs a day must not collide
           git checkout -b "$branch"
-          git add discovery/
-          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
-          git commit -m "Discovery candidates ${day}"
+          git commit -m "$title"
           git push -u origin "$branch"
-          title="Discovery candidates ${day} (${n})"
-          body="$(printf '%s candidates. The table and entry skeletons are in discovery/runs/%s.md. Review, then add the ones worth keeping to index/.\n\nThis PR only records what was examined (discovery/seen.json) and the candidate report; it never changes index/.' "$n" "$stamp")"
-          if ! gh pr create --title "$title" --body "$body" --base main --head "$branch"; then
-            fallback="$(printf '%s\n\nPull request creation is disabled for Actions in this repository (Settings > Actions > General > Allow GitHub Actions to create and approve pull requests). The branch %s holds the report.' "$body" "$branch")"
-            gh issue create --title "$title" --body "$fallback"
-          fi
+          gh pr create --title "$title" --body-file report/summary.md --base main --head "$branch" \
+            || gh issue create --title "$title" --body "Actions may not open pull requests here; branch ${branch} holds the rules."

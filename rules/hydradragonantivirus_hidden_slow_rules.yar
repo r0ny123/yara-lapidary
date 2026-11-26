@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/HydraDragonAntivirus/HydraDragonAntivirus/blob/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar
-// Pinned:   https://raw.githubusercontent.com/HydraDragonAntivirus/HydraDragonAntivirus/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar
-// Author:   HydraDragonAntivirus
-// License:  GPL-2.0 (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/HydraDragonAntivirus/HydraDragonAntivirus/blob/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar
+// Pinned: https://raw.githubusercontent.com/HydraDragonAntivirus/HydraDragonAntivirus/57b3da1b93086bf5471fce851d0fa36410da98b0/hydradragon/yara-x/hidden_slow_rules.yar
+// Author: HydraDragonAntivirus
+// License: GPL-2.0
+// Fetched: 2026-10-22
+// Techniques: content-hash-range, hex-alternatives, match-length, match-offset-arithmetic, module-iterator, nested-loop, pattern-in-window, read-arithmetic
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "pe"
 import "hash"

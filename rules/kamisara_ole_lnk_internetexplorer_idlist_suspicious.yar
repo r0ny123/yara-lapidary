@@ -1,9 +1,14 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/kamisara/AI-malware-sandbox/blob/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar
-// Pinned:   https://raw.githubusercontent.com/kamisara/AI-malware-sandbox/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar
-// Author:   kamisara
-// License:  NOASSERTION (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/kamisara/AI-malware-sandbox/blob/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar
+// Pinned: https://raw.githubusercontent.com/kamisara/AI-malware-sandbox/5cdbeaabfd08d5244211dae539ae5251cb4117d9/rules/yarahub/OLE_LNK_InternetExplorer_IDLIST_Suspicious.yar
+// Author: kamisara
+// License: NOASSERTION
+// Fetched: 2026-10-22
+// Techniques: match-offset-arithmetic, read-arithmetic
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: earliest first commit (2026-02-14).
+//   Review the technique tags. Same filename also under Ununp3ntium115/Custom-Yara-Rules;
+//   content differs, verify which is the author's.
 
 /*
     YARA Rule for detecting malicious Internet Explorer IDLIST in OLE-embedded LNKs

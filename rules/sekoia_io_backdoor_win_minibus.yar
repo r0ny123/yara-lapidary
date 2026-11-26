@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar
-// Pinned:   https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar
-// Author:   SEKOIA-IO
-// License:  NOASSERTION (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/SEKOIA-IO/Community/blob/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar
+// Pinned: https://raw.githubusercontent.com/SEKOIA-IO/Community/c6c99501894f73c852f5cd9c13ce44c6f4a025e2/yara_rules/backdoor_win_minibus.yar
+// Author: SEKOIA-IO
+// License: NOASSERTION
+// Fetched: 2026-10-22
+// Techniques: content-hash-range
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "pe"
 import "hash"

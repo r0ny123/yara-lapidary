@@ -1,9 +1,12 @@
-// Vendored copy for study. Not original work of this repository.
-// Source:   https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara
-// Pinned:   https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara
-// Author:   reversinglabs
-// License:  MIT (as declared by the source; see it for terms)
-// Fetched:  2026-10-22
+// Vendored copy of a public rule, not original work of this repository.
+// Source: https://github.com/reversinglabs/reversinglabs-siem-rules/blob/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara
+// Pinned: https://raw.githubusercontent.com/reversinglabs/reversinglabs-siem-rules/2b627038b65c2635932a62670ece37d0f8ca4fd0/Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.1.yara
+// Author: reversinglabs
+// License: MIT
+// Fetched: 2026-10-22
+// Techniques: match-length, match-offset-arithmetic, module-iterator, pe-structure
+// Expect: warn
+// Notes: Auto-promoted from discovery; origin chosen because: only copy. Review the technique tags.
 
 import "pe"
 
