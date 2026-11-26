@@ -4,6 +4,11 @@
     "date": "2026-10-22",
     "sha256": "a324f0579b50027a9134742a4c6f6a8971303fe8cf7b685cd3ec947e24027a6d"
   },
+  "100daysofyara/2022:glesnewich/APT_NK_UNC4034_TrojanizedPutty_BLINDINGCAN.yar": {
+    "canonical": "100daysofyara/2022:glesnewich/APT_NK_UNC4034_TrojanizedPutty_BLINDINGCAN.yar",
+    "date": "2026-11-17",
+    "sha256": "53fbe3b5d3500436fc9aaa470ba9026c978a7627c9a989986ba7aca55aefa592"
+  },
   "100daysofyara/2023:bitsofbinary/MAL_AcidBox.yar": {
     "canonical": "100daysofyara/2023:bitsofbinary/MAL_AcidBox.yar",
     "date": "2026-10-22",
@@ -19,11 +24,21 @@
     "date": "2026-11-10",
     "sha256": "43c7fe5e2f3002331a697b3e0bc5658be55516e69e27bf6e4931174397199b1d"
   },
+  "100daysofyara/2024:fr0gger/Day7_Richash.yar": {
+    "canonical": "100daysofyara/2024:fr0gger/Day7_Richash.yar",
+    "date": "2026-11-17",
+    "sha256": "417696abe50038a97942a159715c8231f0efc9b348aeffb21557557b6ebcd9d3"
+  },
   "100daysofyara/2024:qutluch/Day_024.yar": {
     "canonical": "100daysofyara/2024:qutluch/Day_024.yar",
     "date": "2026-10-09",
     "indexed_as": "100daysofyara_day_024",
     "sha256": "41f593d355bbd469e2d785f9ab312794c10fe87bc979d29955a09caaba77e497"
+  },
+  "100daysofyara/2026:RustyNoob619/Day4.yara": {
+    "canonical": "100daysofyara/2026:RustyNoob619/Day4.yara",
+    "date": "2026-11-17",
+    "sha256": "2c466ec7ae76fc0a6ba39475404d71f0686e568ff26a1d7d88cbdc4e9ecf69a7"
   },
   "2367765883/hephaestus-terminal-management:yararules/packers/packer_compiler_signatures.yar": {
     "canonical": "svdwi/bluebox:App/yarascripts/YaraScan/rules/packers/packer_compiler_signatures.yar",
@@ -362,7 +377,7 @@
   },
   "malwarology/versioninfo:yara/ruleset.yar": {
     "canonical": "malwarology/versioninfo:yara/ruleset.yar",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "0d6f6d93ccef9610f2b0f818fce762d33e3cdb76d7db269e1d3ae39b97dbfb90"
   },
   "meisameb/repository-of-yara-rules:generic/sta_Voltron_0xFancyFilter.yara": {
@@ -371,9 +386,14 @@
     "rejected": "copy of juanandresgs's rule with minor edits",
     "sha256": "21d18db9faf3cdf130558aa1e1c1fe0a27aa410088eed6fc6e72bddeddaaabe9"
   },
+  "mgreen27/100daysofyara:2025/APT_RedCurl_PE_Rich_Signature.yar": {
+    "canonical": "mgreen27/100daysofyara:2025/APT_RedCurl_PE_Rich_Signature.yar",
+    "date": "2026-11-17",
+    "sha256": "36df059eeff829697af38275656149509541f06eaae6147995089f204b7978ef"
+  },
   "mgreen27/100daysofyara:2025/SUS_PE_WeirdDebugInfoType.yar": {
     "canonical": "mgreen27/100daysofyara:2025/SUS_PE_WeirdDebugInfoType.yar",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "ca2e76444eba2612c149d6e091edf1875b87cc92e04904dadb1f45ead9214763"
   },
   "mgreen27/detectraptor:yara/full_windows_process.yar": {
@@ -421,6 +441,11 @@
     "date": "2026-10-22",
     "sha256": "1c7c81badeee07f09a3551b98015b9fe34c7dd05b8b90a6a0fad190a3caa514b"
   },
+  "neo23x0/signature-base:yara/gen_imphash_detection.yar": {
+    "canonical": "neo23x0/signature-base:yara/gen_imphash_detection.yar",
+    "date": "2026-11-17",
+    "sha256": "37d954f571f555d5bd26f8abe0707ff94b07a67264d3bdc7f74f1acb546a955a"
+  },
   "nvisosecurity/nviso-cti:Epic_Manchego_IOC/bmp_steganography.yar": {
     "canonical": "nvisosecurity/nviso-cti:Epic_Manchego_IOC/bmp_steganography.yar",
     "date": "2026-10-22",
@@ -433,7 +458,7 @@
   },
   "poonia80ravi/yara_rules:windows/win.dilljuice_w0.yar": {
     "canonical": "poonia80ravi/yara_rules:windows/win.dilljuice_w0.yar",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "84adf366ca1690be5758a8748e35419a35fe977c3ffbf5be4cbe30c9abe13921"
   },
   "pwcuk-cto/thesas2021-red-kelpie:yara/ms13_098.yar": {
@@ -451,6 +476,11 @@
     "date": "2026-10-09",
     "indexed_as": "100daysofyara_day_024",
     "sha256": "41f593d355bbd469e2d785f9ab312794c10fe87bc979d29955a09caaba77e497"
+  },
+  "qqbgxi/malwaredetectiontool:rules/yara/Day7_Richash.yar": {
+    "canonical": "100daysofyara/2024:fr0gger/Day7_Richash.yar",
+    "date": "2026-11-17",
+    "sha256": "417696abe50038a97942a159715c8231f0efc9b348aeffb21557557b6ebcd9d3"
   },
   "qqbgxi/malwaredetectiontool:rules/yara/Day_024.yar": {
     "canonical": "100daysofyara/2024:qutluch/Day_024.yar",
@@ -502,6 +532,16 @@
     "date": "2026-10-20",
     "sha256": "0c830142d25b2653abdd9f9e6c1c7986187e3ef4dd3c34531018b372c56fdf8e"
   },
+  "r4z1xx/yara-collection:SEKOIA-IO/backdoor_win_minibike.yar": {
+    "canonical": "copy of sekoia-io's backdoor_win_minibike.yar",
+    "date": "2026-11-17",
+    "sha256": null
+  },
+  "r4z1xx/yara-collection:SEKOIA-IO/backdoor_win_winordll64.yar": {
+    "canonical": "copy of sekoia-io's backdoor_win_winordll64.yar",
+    "date": "2026-11-17",
+    "sha256": null
+  },
   "r4z1xx/yara-collection:SEKOIA-IO/downloader_win_apt33_tickler.yar": {
     "canonical": "copy of sekoia-io's downloader_win_apt33_tickler.yar",
     "date": "2026-10-20",
@@ -511,6 +551,21 @@
     "canonical": "copy of sekoia-io's dropper_win_ninerat.yar",
     "date": "2026-10-20",
     "sha256": "dda70571524cbb0408092662870ca3c731a7f19014773209587c0ec7c2aab81c"
+  },
+  "r4z1xx/yara-collection:SEKOIA-IO/launcher_win_bluehaze.yar": {
+    "canonical": "copy of sekoia-io's launcher_win_bluehaze.yar",
+    "date": "2026-11-17",
+    "sha256": null
+  },
+  "r4z1xx/yara-collection:SEKOIA-IO/loader_win_dodgebox.yar": {
+    "canonical": "copy of sekoia-io's loader_win_dodgebox.yar",
+    "date": "2026-11-17",
+    "sha256": null
+  },
+  "r4z1xx/yara-collection:SEKOIA-IO/loader_win_ninerat.yar": {
+    "canonical": "copy of sekoia-io's loader_win_ninerat.yar",
+    "date": "2026-11-17",
+    "sha256": null
   },
   "repulsivityy/virustotal:VT_Hunting/mal_gootloader.yar": {
     "canonical": null,
@@ -525,13 +580,18 @@
   },
   "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara": {
     "canonical": "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.2.yara",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "29b84bfe68b40e15917aea9245f336b4bff7c41d1fdef576ad656f206f10b525"
   },
   "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara": {
     "canonical": "reversinglabs/reversinglabs-siem-rules:Ransomware/QuantumLocker/YARA/AntiDebugging.StringCopyAccessViolation.3.yara",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "848935fc37d36f3a3c080e9d7b6ebc6a0e65db49ad34a847d3039c8aa4ae22af"
+  },
+  "rustedbytes/pyregistry:supplied/signature-base/yara/gen_imphash_detection.yar": {
+    "canonical": "neo23x0/signature-base:yara/gen_imphash_detection.yar",
+    "date": "2026-11-17",
+    "sha256": "37d954f571f555d5bd26f8abe0707ff94b07a67264d3bdc7f74f1acb546a955a"
   },
   "ryanmrestivo/blue-team:_file-analysis/generic-parser/src/rules/Packers/packer_compiler_signatures.yar": {
     "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
@@ -554,6 +614,11 @@
     "date": "2026-10-13",
     "indexed_as": "sekoia_io_interlock",
     "sha256": "1b57a064b8678bcc86b89019ac239b52c6aca5b3ebec7afbefd294cb438d43de"
+  },
+  "sekoia-io/community:yara_rules/apt_darkpink_loader_decryptionroutine.yar": {
+    "canonical": "sekoia-io/community:yara_rules/apt_darkpink_loader_decryptionroutine.yar",
+    "date": "2026-11-17",
+    "sha256": "f6261d10f0ab1a5d146d151bf3c20fcce2e917f508c4178912119ccf34a498d6"
   },
   "sekoia-io/community:yara_rules/apt_windows_wip19_screencap.yar": {
     "canonical": null,
@@ -583,11 +648,21 @@
     "indexed_as": "sekoia_io_backdoor_win_mgbot_main",
     "sha256": "0c830142d25b2653abdd9f9e6c1c7986187e3ef4dd3c34531018b372c56fdf8e"
   },
+  "sekoia-io/community:yara_rules/backdoor_win_minibike.yar": {
+    "canonical": "sekoia-io/community:yara_rules/backdoor_win_minibike.yar",
+    "date": "2026-11-17",
+    "sha256": "f6f58ad93f65bc2c17ed81d8910704781a9b11369a5c0e3216e22734de9fbce4"
+  },
   "sekoia-io/community:yara_rules/backdoor_win_minibus.yar": {
     "canonical": "sekoia-io/community:yara_rules/backdoor_win_minibus.yar",
     "date": "2026-10-13",
     "indexed_as": "sekoia_io_backdoor_win_minibus",
     "sha256": "48d80eaa4bd616c1d060c2bb7c807d356883c529c80416ee1d3032b3b477445f"
+  },
+  "sekoia-io/community:yara_rules/backdoor_win_winordll64.yar": {
+    "canonical": "sekoia-io/community:yara_rules/backdoor_win_winordll64.yar",
+    "date": "2026-11-17",
+    "sha256": "9645670da3c06ad5170f484cbf1dbcf26b82a9849f46dd4551245d22adaddba5"
   },
   "sekoia-io/community:yara_rules/backoor_win_gobear.yar": {
     "canonical": null,
@@ -611,22 +686,52 @@
     "indexed_as": "sekoia_io_dropper_win_ninerat",
     "sha256": "dda70571524cbb0408092662870ca3c731a7f19014773209587c0ec7c2aab81c"
   },
+  "sekoia-io/community:yara_rules/implant_win_incontroller.yar": {
+    "canonical": "sekoia-io/community:yara_rules/implant_win_incontroller.yar",
+    "date": "2026-11-17",
+    "sha256": "6f85c36d4c3fff7057dd3ae4e2d478923f176d311c0ffc5ea34a74d30fd25cfd"
+  },
   "sekoia-io/community:yara_rules/implant_win_lyceum.yar": {
     "canonical": "sekoia-io/community:yara_rules/implant_win_lyceum.yar",
     "date": "2026-10-13",
     "indexed_as": "sekoia_io_implant_win_lyceum",
     "sha256": "d702986ed9327c51366c3ad3cc03e865ddfee25306095d0cea816cd61bdcfc7e"
   },
+  "sekoia-io/community:yara_rules/implant_win_mysterysnail.yar": {
+    "canonical": "sekoia-io/community:yara_rules/implant_win_mysterysnail.yar",
+    "date": "2026-11-17",
+    "sha256": "d4c1fc515846b808a810b6134d9a7b00a28564672370b2e62008ffebe14489c0"
+  },
   "sekoia-io/community:yara_rules/installer_win_minibus.yar": {
     "canonical": null,
     "date": "2026-10-13",
     "sha256": null
+  },
+  "sekoia-io/community:yara_rules/launcher_win_bluehaze.yar": {
+    "canonical": "sekoia-io/community:yara_rules/launcher_win_bluehaze.yar",
+    "date": "2026-11-17",
+    "sha256": "5f087b4af9301ccf302440100912dbff9a04d7d920b3efe3ec114f18dbe0ead2"
+  },
+  "sekoia-io/community:yara_rules/launcher_win_mistcloak.yar": {
+    "canonical": "sekoia-io/community:yara_rules/launcher_win_mistcloak.yar",
+    "date": "2026-11-17",
+    "sha256": "232cc90d177ba651a711b36cc65323f2b6f6a7f5cab8c447fa29645d7135a315"
+  },
+  "sekoia-io/community:yara_rules/loader_win_dodgebox.yar": {
+    "canonical": "sekoia-io/community:yara_rules/loader_win_dodgebox.yar",
+    "date": "2026-11-17",
+    "sha256": "1eeb46745ab990aa6cd7c13a6db8fc5b72007111bddfd5e8c9734c88977153a9"
   },
   "sekoia-io/community:yara_rules/loader_win_jennlog.yar": {
     "canonical": "sekoia-io/community:yara_rules/loader_win_jennlog.yar",
     "date": "2026-10-13",
     "indexed_as": "sekoia_io_loader_win_jennlog",
     "sha256": "6eb1fae8c08c3d2f3fd37bf4415a4d555d9888cdde07c834c19789e261a3c773"
+  },
+  "sekoia-io/community:yara_rules/loader_win_ninerat.yar": {
+    "canonical": "sekoia-io/community:yara_rules/loader_win_ninerat.yar",
+    "date": "2026-11-17",
+    "sha256": "e86a51da3218f0c1748d8d76498783080b718ec44d673e7d30ab3102bd3c1faf"
   },
   "sekoia-io/community:yara_rules/loader_win_revil_loader.yar": {
     "canonical": null,
@@ -643,16 +748,56 @@
     "date": "2026-10-13",
     "sha256": null
   },
+  "sekoia-io/community:yara_rules/wiper_win_isaacwiper.yar": {
+    "canonical": "sekoia-io/community:yara_rules/wiper_win_isaacwiper.yar",
+    "date": "2026-11-17",
+    "sha256": "7b3b36267a813aeec6b080232d76f070ff09ca2ddc9f089c45c9aa5f9a1f7642"
+  },
   "sekoia-io/community:yara_rules/wiper_win_ruransom.yar": {
     "canonical": null,
     "date": "2026-10-13",
     "sha256": null
+  },
+  "shobhitmishra-bot/android-yara-rules:10/launcher_win_bluehaze.yar": {
+    "canonical": "sekoia-io/community:yara_rules/launcher_win_bluehaze.yar",
+    "date": "2026-11-17",
+    "sha256": "5f087b4af9301ccf302440100912dbff9a04d7d920b3efe3ec114f18dbe0ead2"
+  },
+  "shobhitmishra-bot/android-yara-rules:10/launcher_win_mistcloak.yar": {
+    "canonical": "sekoia-io/community:yara_rules/launcher_win_mistcloak.yar",
+    "date": "2026-11-17",
+    "sha256": "232cc90d177ba651a711b36cc65323f2b6f6a7f5cab8c447fa29645d7135a315"
+  },
+  "shobhitmishra-bot/android-yara-rules:10/loader_win_dodgebox.yar": {
+    "canonical": "sekoia-io/community:yara_rules/loader_win_dodgebox.yar",
+    "date": "2026-11-17",
+    "sha256": "1eeb46745ab990aa6cd7c13a6db8fc5b72007111bddfd5e8c9734c88977153a9"
+  },
+  "shobhitmishra-bot/android-yara-rules:10/loader_win_ninerat.yar": {
+    "canonical": "sekoia-io/community:yara_rules/loader_win_ninerat.yar",
+    "date": "2026-11-17",
+    "sha256": "e86a51da3218f0c1748d8d76498783080b718ec44d673e7d30ab3102bd3c1faf"
+  },
+  "shobhitmishra-bot/android-yara-rules:3/apt_darkpink_loader_decryptionroutine.yar": {
+    "canonical": "sekoia-io/community:yara_rules/apt_darkpink_loader_decryptionroutine.yar",
+    "date": "2026-11-17",
+    "sha256": "f6261d10f0ab1a5d146d151bf3c20fcce2e917f508c4178912119ccf34a498d6"
   },
   "shobhitmishra-bot/android-yara-rules:6/backdoor_win_mgbot_main.yar": {
     "canonical": "sekoia-io/community:yara_rules/backdoor_win_mgbot_main.yar",
     "date": "2026-10-20",
     "indexed_as": "sekoia_io_backdoor_win_mgbot_main",
     "sha256": "0c830142d25b2653abdd9f9e6c1c7986187e3ef4dd3c34531018b372c56fdf8e"
+  },
+  "shobhitmishra-bot/android-yara-rules:6/backdoor_win_minibike.yar": {
+    "canonical": "sekoia-io/community:yara_rules/backdoor_win_minibike.yar",
+    "date": "2026-11-17",
+    "sha256": "f6f58ad93f65bc2c17ed81d8910704781a9b11369a5c0e3216e22734de9fbce4"
+  },
+  "shobhitmishra-bot/android-yara-rules:6/backdoor_win_winordll64.yar": {
+    "canonical": "sekoia-io/community:yara_rules/backdoor_win_winordll64.yar",
+    "date": "2026-11-17",
+    "sha256": "9645670da3c06ad5170f484cbf1dbcf26b82a9849f46dd4551245d22adaddba5"
   },
   "shobhitmishra-bot/android-yara-rules:7/downloader_win_apt33_tickler.yar": {
     "canonical": "sekoia-io/community:yara_rules/downloader_win_apt33_tickler.yar",
@@ -704,10 +849,25 @@
     "date": "2026-10-22",
     "sha256": "d3b87fd84125696c63beb4a2f0b9e107567e97b2d4b13eb439a69f0afa9bcdb9"
   },
+  "tesnim5hamdouni/my-first-malware-analysis:get_rich_sign.yara": {
+    "canonical": "tesnim5hamdouni/my-first-malware-analysis:get_rich_sign.yara",
+    "date": "2026-11-17",
+    "sha256": "a6a7b4f8a7aeab20f80c3744683f418674fb0874c130b87277647f3f29697545"
+  },
+  "tesnim5hamdouni/my-first-malware-analysis:sim_rich_header.yara": {
+    "canonical": "tesnim5hamdouni/my-first-malware-analysis:sim_rich_header.yara",
+    "date": "2026-11-17",
+    "sha256": "9da4fba46c08c93357a3077252da04da3a28e37249a39c00646958d64f1f50b8"
+  },
   "thevantadev/congnidroid:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara": {
     "canonical": "cyb3rmx/qu1cksc0pe:Systems/Multiple/YaraRules_Multiple/pump_and_dump.yara",
     "date": "2026-10-22",
     "sha256": "8b66488d2bc2078df831670fbbf462e0fefeba4313e3c977627f5495aceb04d4"
+  },
+  "thinking-builder/aegismind:yara_rules/gen_imphash_detection.yar": {
+    "canonical": "thinking-builder/aegismind:yara_rules/gen_imphash_detection.yar",
+    "date": "2026-11-17",
+    "sha256": "b941b355ee7a12177ba12bba217b430567da466f0ee6f73af0da70889f653bde"
   },
   "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar": {
     "canonical": "ulisesrc/yara-rule:Packers/packer_compiler_signatures.yar",
@@ -772,14 +932,19 @@
     "date": "2026-10-22",
     "sha256": "9710b940501001b66abde71937eeccd8654d77eb8419271bc0f477368b22ef86"
   },
+  "x746b/winforensics-mcp:winforensics_mcp/rules/gen_imphash_detection.yar": {
+    "canonical": "thinking-builder/aegismind:yara_rules/gen_imphash_detection.yar",
+    "date": "2026-11-17",
+    "sha256": "b941b355ee7a12177ba12bba217b430567da466f0ee6f73af0da70889f653bde"
+  },
   "xianzheng-id/ransompyshield-model:Rule/AntiDebug.yar": {
     "canonical": "xianzheng-id/ransompyshield-model:Rule/AntiDebug.yar",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "a10391bc521ecef83599e225b50e5c596f680c0aad8fefc591c704a27a3e8d57"
   },
   "xxxxxxxxxxxj/apt-tracerag:Vector-KG/yara_rules/malcat/frameworks.yar": {
     "canonical": "secpriv_frameworks",
-    "date": "2026-11-10",
+    "date": "2026-11-17",
     "sha256": "550baf543212bf08802ec962aba6a02a7bafd61babd02158567ddc9105683d9e"
   },
   "yara-rules/rules:packers/packer_compiler_signatures.yar": {
